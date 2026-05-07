@@ -5,7 +5,7 @@ metadata:
 spec:
   parameters:
     namespace: sump-pump
-    image: ghcr.io/cujarrett/sump-pump-consumer:main
+    image: ghcr.io/cujarrett/sump-pump-consumer:sha-5c57360352e6702e61d63f5c5dc3562e9c6415f8
     port: 8080
     environment: test
     subscriptionRef:
