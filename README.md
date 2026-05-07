@@ -2,17 +2,16 @@
 
 XR instance files for all tenant apps running on the [homelab](https://github.com/cujarrett/homelab) cluster.
 
-## What lives here
+## Structure
 
-Each directory under `tenants/` is an ArgoCD-managed application containing Crossplane XR instance files for a single tenant.
+Each top-level directory is a tenant namespace. Files inside are flat — one file per Crossplane XR instance, named `<xr-instance-name>.yaml`. The `kind` in each file tells you which XRD it uses.
 
-| Tenant | App |
-|---|---|
-| `js-pollock/` | js-pollock SPA |
-| `mattjarrett-com/` | mattjarrett.com WordPress |
-| `mattjarrett-dev/` | mattjarrett.dev SPA |
-| `my-vinyl/` | my-vinyl SPA + API |
-| `sump-pump/` | sump-pump bridge, consumer, and supporting resources |
+```
+tenants/
+  <namespace>/
+    <xr-instance-name>.yaml   ← kind: XSpa | XApi | XWordPressPlatform | …
+    <xr-instance-name>.yaml
+```
 
 ## How deploys work
 
@@ -20,10 +19,12 @@ CI in each source repo calls the reusable workflow at `.github/workflows/update-
 
 See [homelab](https://github.com/cujarrett/homelab) for cluster infra, platform compositions, and ArgoCD bootstrap config.
 
-## Adding a new tenant
+## Adding a new app
 
-1. Create `tenants/<app>/` with the XR instance file(s) following the naming convention (`spa.yaml` or `api.yaml`)
-2. Add the zero-config `deploy` job to the source repo's CI:
+1. Create `<namespace>/<xr-instance-name>.yaml` with the XR instance manifest
+2. Add the `deploy` job to the source repo's CI:
+
+**Zero-config** — works when the repo name equals the namespace and the XR instance name:
 
 ```yaml
 deploy:
@@ -33,4 +34,28 @@ deploy:
     homelab_pat: ${{ secrets.HOMELAB_PAT }}
 ```
 
-If the repo name doesn't match the namespace convention, add a `file:` override.
+**With namespace override** — when the repo lives in a different namespace (e.g. `my-vinyl-api` belongs to the `my-vinyl` namespace):
+
+```yaml
+deploy:
+  needs: build
+  uses: cujarrett/homelab-tenants/.github/workflows/update-image-tag.yml@main
+  with:
+    namespace: my-vinyl
+  secrets:
+    homelab_pat: ${{ secrets.HOMELAB_PAT }}
+```
+
+**With full file override** — for repos where the name can't be derived (e.g. a dot in the repo name):
+
+```yaml
+deploy:
+  needs: build
+  uses: cujarrett/homelab-tenants/.github/workflows/update-image-tag.yml@main
+  with:
+    file: tenants/<namespace>/<xr-instance-name>.yaml
+  secrets:
+    homelab_pat: ${{ secrets.HOMELAB_PAT }}
+```
+
+`HOMELAB_PAT` is a fine-grained PAT scoped to this repo with `Contents: Read and write`.

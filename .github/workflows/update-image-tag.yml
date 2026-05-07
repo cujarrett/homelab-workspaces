@@ -1,12 +1,16 @@
 on:
   workflow_call:
     inputs:
+      namespace:
+        description: "Override: tenant namespace (directory under tenants/). Defaults to the calling repo name."
+        required: false
+        type: string
       file:
-        description: "Override: path to the XR file (e.g. tenants/my-vinyl/api.yaml). Derived from repo name by default."
+        description: "Override: full path to the XR file. Defaults to tenants/<namespace>/<repo-name>.yaml."
         required: false
         type: string
       image:
-        description: "Override: full image name without tag. Derived from repo name by default."
+        description: "Override: full image name without tag. Defaults to ghcr.io/cujarrett/<repo-name>."
         required: false
         type: string
     secrets:
@@ -27,14 +31,14 @@ jobs:
             IMAGE="ghcr.io/cujarrett/${REPO_NAME}"
           fi
 
+          NAMESPACE="${{ inputs.namespace }}"
+          if [[ -z "$NAMESPACE" ]]; then
+            NAMESPACE="${REPO_NAME}"
+          fi
+
           FILE="${{ inputs.file }}"
           if [[ -z "$FILE" ]]; then
-            NAMESPACE=$(echo "$REPO_NAME" | sed -E 's/-(api|bridge|consumer)$//')
-            if [[ "$REPO_NAME" =~ -(api|bridge|consumer)$ ]]; then
-              FILE="tenants/${NAMESPACE}/api.yaml"
-            else
-              FILE="tenants/${REPO_NAME}/spa.yaml"
-            fi
+            FILE="tenants/${NAMESPACE}/${REPO_NAME}.yaml"
           fi
 
           echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
