@@ -38,7 +38,7 @@ jobs:
 
           FILE="${{ inputs.file }}"
           if [[ -z "$FILE" ]]; then
-            FILE="tenants/${NAMESPACE}/${REPO_NAME}.yaml"
+            FILE="${NAMESPACE}/${REPO_NAME}.yaml"
           fi
 
           echo "image=$IMAGE" >> "$GITHUB_OUTPUT"

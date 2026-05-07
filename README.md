@@ -7,10 +7,9 @@ XR instance files for all tenant apps running on the [homelab](https://github.co
 Each top-level directory is a tenant namespace. Files inside are flat — one file per Crossplane XR instance, named `<xr-instance-name>.yaml`. The `kind` in each file tells you which XRD it uses.
 
 ```
-tenants/
-  <namespace>/
-    <xr-instance-name>.yaml   ← kind: XSpa | XApi | XWordPressPlatform | …
-    <xr-instance-name>.yaml
+<namespace>/
+  <xr-instance-name>.yaml   ← kind: XSpa | XApi | XWordPressPlatform | …
+  <xr-instance-name>.yaml
 ```
 
 ## How deploys work
@@ -53,7 +52,7 @@ deploy:
   needs: build
   uses: cujarrett/homelab-tenants/.github/workflows/update-image-tag.yml@main
   with:
-    file: tenants/<namespace>/<xr-instance-name>.yaml
+    file: <namespace>/<xr-instance-name>.yaml
   secrets:
     homelab_pat: ${{ secrets.HOMELAB_PAT }}
 ```

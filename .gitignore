@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Local overrides / scratch files
+*.local.yaml
+*.local.yml
+
+# Editor
+.idea/
+.vscode/
