@@ -1,0 +1,59 @@
+on:
+  workflow_call:
+    inputs:
+      file:
+        description: "Override: path to the XR file (e.g. tenants/my-vinyl/api.yaml). Derived from repo name by default."
+        required: false
+        type: string
+      image:
+        description: "Override: full image name without tag. Derived from repo name by default."
+        required: false
+        type: string
+    secrets:
+      homelab_pat:
+        required: true
+
+jobs:
+  update-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Derive defaults from repo name
+        id: defaults
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"  # strips "cujarrett/" prefix
+
+          IMAGE="${{ inputs.image }}"
+          if [[ -z "$IMAGE" ]]; then
+            IMAGE="ghcr.io/cujarrett/${REPO_NAME}"
+          fi
+
+          FILE="${{ inputs.file }}"
+          if [[ -z "$FILE" ]]; then
+            NAMESPACE=$(echo "$REPO_NAME" | sed -E 's/-(api|bridge|consumer)$//')
+            if [[ "$REPO_NAME" =~ -(api|bridge|consumer)$ ]]; then
+              FILE="tenants/${NAMESPACE}/api.yaml"
+            else
+              FILE="tenants/${REPO_NAME}/spa.yaml"
+            fi
+          fi
+
+          echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
+          echo "file=$FILE"   >> "$GITHUB_OUTPUT"
+
+      - name: Update image tag
+        env:
+          GH_TOKEN: ${{ secrets.homelab_pat }}
+        run: |
+          FILE="${{ steps.defaults.outputs.file }}"
+          IMAGE="${{ steps.defaults.outputs.image }}"
+          REPO=cujarrett/homelab-tenants
+          SHA_TAG=sha-${GITHUB_SHA}
+
+          FILE_SHA=$(gh api /repos/$REPO/contents/$FILE --jq '.sha')
+          CONTENT=$(gh api /repos/$REPO/contents/$FILE --jq '.content' | tr -d '\n' | base64 -d)
+          UPDATED=$(echo "$CONTENT" | sed "s|image: ${IMAGE}:.*|image: ${IMAGE}:${SHA_TAG}|")
+
+          gh api --method PUT /repos/$REPO/contents/$FILE \
+            -f message="chore: deploy ${IMAGE##*/} ${SHA_TAG}" \
+            -f content="$(echo "$UPDATED" | base64 -w 0)" \
+            -f sha="$FILE_SHA"
