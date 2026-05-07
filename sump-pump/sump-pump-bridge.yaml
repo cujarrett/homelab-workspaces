@@ -5,7 +5,7 @@ metadata:
 spec:
   parameters:
     namespace: sump-pump
-    image: ghcr.io/cujarrett/sump-pump-bridge:main
+    image: ghcr.io/cujarrett/sump-pump-bridge:sha-17314fb516ff57447f64248ff9962dc7fa72a5a0
     port: 8080
     host: sump-pump-bridge.local.lab
     tlsIssuer: local-lab-ca-issuer
