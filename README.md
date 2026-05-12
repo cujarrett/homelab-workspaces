@@ -8,7 +8,7 @@ Each top-level directory is a tenant namespace. Files inside are flat — one fi
 
 ```
 <namespace>/
-  <xr-instance-name>.yaml   ← kind: XSpa | XApi | XWordPressPlatform | …
+  <xr-instance-name>.yaml   ← kind: XSpa | XApi | XWordpress | …
   <xr-instance-name>.yaml
 ```
 

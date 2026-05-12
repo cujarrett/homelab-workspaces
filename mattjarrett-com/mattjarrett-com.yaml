@@ -1,5 +1,5 @@
 apiVersion: platform.local.lab/v1alpha1
-kind: XWordPressPlatform
+kind: XWordpress
 metadata:
   name: mattjarrett-com
 spec:
