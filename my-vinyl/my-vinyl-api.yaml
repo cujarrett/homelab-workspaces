@@ -9,8 +9,8 @@ spec:
     port: 8080
     host: my-vinyl-api.local.lab
     tlsIssuer: local-lab-ca-issuer
-    environment: test
     cache:
       enabled: true
+      environment: cluster
     secretRef:
       name: discogs-credentials
