@@ -9,4 +9,3 @@ spec:
     filterSubject: "home.appliance.sump-pump.>"
     deliverPolicy: new
     ackPolicy: explicit
-    ackWait: "30s"

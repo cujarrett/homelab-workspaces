@@ -1,6 +1,6 @@
-# homelab-tenants
+# homelab-workspaces
 
-XR instance files for all tenant apps running on the [homelab](https://github.com/cujarrett/homelab) cluster.
+XR instance files for all workspace apps running on the [homelab](https://github.com/cujarrett/homelab) cluster.
 
 ## Structure
 
@@ -23,12 +23,14 @@ See [homelab](https://github.com/cujarrett/homelab) for cluster infra, platform 
 1. Create `<namespace>/<xr-instance-name>.yaml` with the XR instance manifest
 2. Add the `deploy` job to the source repo's CI:
 
+> **Repo renamed:** If your CI still calls `cujarrett/homelab-tenants/.github/workflows/...`, update it to `cujarrett/homelab-workspaces/.github/workflows/...`.
+
 **Zero-config** — works when the repo name equals the namespace and the XR instance name:
 
 ```yaml
 deploy:
   needs: build
-  uses: cujarrett/homelab-tenants/.github/workflows/update-image-tag.yml@main
+  uses: cujarrett/homelab-workspaces/.github/workflows/update-image-tag.yml@main
   secrets:
     homelab_pat: ${{ secrets.HOMELAB_PAT }}
 ```
@@ -38,7 +40,7 @@ deploy:
 ```yaml
 deploy:
   needs: build
-  uses: cujarrett/homelab-tenants/.github/workflows/update-image-tag.yml@main
+  uses: cujarrett/homelab-workspaces/.github/workflows/update-image-tag.yml@main
   with:
     namespace: my-vinyl
   secrets:
@@ -50,7 +52,7 @@ deploy:
 ```yaml
 deploy:
   needs: build
-  uses: cujarrett/homelab-tenants/.github/workflows/update-image-tag.yml@main
+  uses: cujarrett/homelab-workspaces/.github/workflows/update-image-tag.yml@main
   with:
     file: <namespace>/<xr-instance-name>.yaml
   secrets:

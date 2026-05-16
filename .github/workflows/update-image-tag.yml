@@ -50,7 +50,7 @@ jobs:
         run: |
           FILE="${{ steps.defaults.outputs.file }}"
           IMAGE="${{ steps.defaults.outputs.image }}"
-          REPO=cujarrett/homelab-tenants
+          REPO=cujarrett/homelab-workspaces
           SHA_TAG=sha-${GITHUB_SHA}
 
           FILE_SHA=$(gh api /repos/$REPO/contents/$FILE --jq '.sha')

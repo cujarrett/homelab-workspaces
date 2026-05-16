@@ -9,12 +9,8 @@ spec:
     host: myvinyl.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
     contentSecurityPolicy: "default-src 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.discogs.com; frame-ancestors 'none'; base-uri 'self';"
-    healthCheckPath: /healthz
     replicas: 1
+    size: sm
     apiProxy:
       enabled: true
       upstream: my-vinyl-api.my-vinyl.svc.cluster.local
-    cpuRequest: "50m"
-    cpuLimit: "200m"
-    memoryRequest: "64Mi"
-    memoryLimit: "128Mi"

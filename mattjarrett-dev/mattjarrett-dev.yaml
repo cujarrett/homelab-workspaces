@@ -10,9 +10,5 @@ spec:
     tlsIssuer: letsencrypt-prod
     imagePullSecret: ghcr-pull-secret
     contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';"
-    healthCheckPath: /healthz
     replicas: 1
-    cpuRequest: "50m"
-    cpuLimit: "200m"
-    memoryRequest: "64Mi"
-    memoryLimit: "128Mi"
+    size: sm

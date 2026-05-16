@@ -11,6 +11,6 @@ spec:
     tlsIssuer: local-lab-ca-issuer
     cache:
       enabled: true
-      environment: cluster
+      backend: cluster
     secretRef:
       name: discogs-credentials
