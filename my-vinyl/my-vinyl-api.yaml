@@ -5,7 +5,7 @@ metadata:
 spec:
   parameters:
     namespace: my-vinyl
-    image: ghcr.io/cujarrett/my-vinyl-api:sha-a6917dd606b9f3706edf195d396b240614c44a21
+    image: ghcr.io/cujarrett/my-vinyl-api:sha-98635291c48ba4db179fd3c550becc5dd9110f6d
     port: 8080
     host: my-vinyl-api.local.lab
     tlsIssuer: local-lab-ca-issuer
