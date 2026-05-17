@@ -8,11 +8,6 @@ spec:
     image: ghcr.io/cujarrett/my-vinyl-api:sha-98635291c48ba4db179fd3c550becc5dd9110f6d
     port: 8080
     replicas: 13
-    healthCheckPath: /healthz
-    cpuRequest: 50m
-    cpuLimit: 200m
-    memoryRequest: 32Mi
-    memoryLimit: 64Mi
     host: my-vinyl-api.local.lab
     tlsIssuer: local-lab-ca-issuer
     cache:
