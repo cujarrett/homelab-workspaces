@@ -23,7 +23,7 @@ See [homelab](https://github.com/cujarrett/homelab) for cluster infra, platform 
 1. Create `<namespace>/<xr-instance-name>.yaml` with the XR instance manifest
 2. Add the `deploy` job to the source repo's CI:
 
-> **Repo renamed:** If your CI still calls `cujarrett/homelab-tenants/.github/workflows/...`, update it to `cujarrett/homelab-workspaces/.github/workflows/...`.
+> **Repo renamed:** If your CI still calls `cujarrett/homelab-workspaces/.github/workflows/...`, update it to `cujarrett/homelab-workspaces/.github/workflows/...`.
 
 **Zero-config** — works when the repo name equals the namespace and the XR instance name:
 
