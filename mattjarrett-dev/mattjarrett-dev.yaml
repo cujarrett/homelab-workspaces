@@ -6,9 +6,9 @@ spec:
   parameters:
     namespace: mattjarrett-dev
     image: ghcr.io/cujarrett/mattjarrett.dev:sha-573e4e025efa9cf2462590a025807d0748bab4a4
+    repo: https://github.com/cujarrett/mattjarrett.dev
     host: mattjarrett.dev
     tlsIssuer: letsencrypt-prod
-    imagePullSecret: ghcr-pull-secret
     contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';"
     replicas: 1
     size: sm

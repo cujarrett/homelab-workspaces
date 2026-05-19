@@ -6,6 +6,7 @@ spec:
   parameters:
     namespace: my-vinyl
     image: ghcr.io/cujarrett/my-vinyl-api:sha-98635291c48ba4db179fd3c550becc5dd9110f6d
+    repo: https://github.com/cujarrett/my-vinyl-api
     port: 8080
     replicas: 1
     host: my-vinyl-api.local.lab

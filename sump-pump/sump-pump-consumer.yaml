@@ -6,6 +6,7 @@ spec:
   parameters:
     namespace: sump-pump
     image: ghcr.io/cujarrett/sump-pump-consumer:sha-4a8404aa2fab94283acf3420abf992fd5f3c627f
+    repo: https://github.com/cujarrett/sump-pump-consumer
     port: 8080
     scrapeInterval: "10s"
     subscriptionRef:
