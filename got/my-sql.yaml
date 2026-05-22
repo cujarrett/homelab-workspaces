@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: my-sql
+spec:
+  parameters:
+    namespace: got
+    environment: cluster
+    dataRetention: delete
+    size: sm
