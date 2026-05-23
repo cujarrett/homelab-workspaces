@@ -8,8 +8,5 @@ spec:
     storageSize: "7Gi"
     dbStorageSize: "1Gi"
     replicas: 1
-    cpuRequest: "250m"
-    cpuLimit: "1500m"
-    memoryRequest: "512Mi"
-    memoryLimit: "1024Mi"
+    size: md
     dataRetention: retain
