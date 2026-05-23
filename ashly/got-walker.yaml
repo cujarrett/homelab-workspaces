@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: got-walker
-spec:
-  parameters:
-    namespace: ashly
-    dataRetention: delete
