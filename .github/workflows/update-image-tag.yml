@@ -2,11 +2,11 @@ on:
   workflow_call:
     inputs:
       namespace:
-        description: "Override: tenant namespace (directory under tenants/). Defaults to the calling repo name."
+        description: "Override: tenant namespace (directory under workspaces/). Defaults to the calling repo name."
         required: false
         type: string
       file:
-        description: "Override: full path to the XR file. Defaults to tenants/<namespace>/<repo-name>.yaml."
+        description: "Override: full path to the XR file. Defaults to workspaces/<namespace>/<repo-name>.yaml."
         required: false
         type: string
       image:
