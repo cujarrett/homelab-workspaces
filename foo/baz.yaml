@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XNoSql
+metadata:
+  name: baz
+spec:
+  parameters:
+    namespace: foo
+    dataRetention: delete
+    partitionKey: id
+    partitionKeyType: S
