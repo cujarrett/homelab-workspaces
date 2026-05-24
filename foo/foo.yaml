@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: foo
+spec:
+  parameters:
+    namespace: foo
+    backend: cluster
+    dataRetention: delete
+    size: sm
