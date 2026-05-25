@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-neon-spreadsheet
+spec:
+  parameters:
+    namespace: guest-neon-spreadsheet
+    backend: cluster
+    dataRetention: delete
