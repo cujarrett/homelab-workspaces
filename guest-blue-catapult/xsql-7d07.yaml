@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-7d07
-spec:
-  parameters:
-    namespace: guest-blue-catapult
-    backend: cluster
-    dataRetention: delete
