@@ -1,0 +1,16 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-neon-spreadsheet
+spec:
+  parameters:
+    namespace: guest-neon-spreadsheet
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-neon-spreadsheet
+    nosqlRef:
+      name: xnosql-neon-spreadsheet
