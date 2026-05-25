@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-neon-catapult
-spec:
-  parameters:
-    namespace: guest-neon-catapult
-    dataRetention: delete
