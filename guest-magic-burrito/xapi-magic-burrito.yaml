@@ -10,5 +10,3 @@ spec:
     replicas: 1
     host: demo1-api.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
-    cache:
-      enabled: true
