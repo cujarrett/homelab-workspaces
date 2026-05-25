@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-velvet-pretzel
-spec:
-  parameters:
-    namespace: guest-velvet-pretzel
-    dataRetention: delete
