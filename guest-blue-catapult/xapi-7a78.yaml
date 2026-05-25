@@ -10,5 +10,7 @@ spec:
     replicas: 1
     host: demo1-api.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-7d07
     cache:
       enabled: true
