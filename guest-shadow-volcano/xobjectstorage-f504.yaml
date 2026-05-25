@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-f504
-spec:
-  parameters:
-    namespace: guest-shadow-volcano
-    dataRetention: delete
