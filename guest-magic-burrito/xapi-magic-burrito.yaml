@@ -1,0 +1,14 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-magic-burrito
+spec:
+  parameters:
+    namespace: guest-magic-burrito
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    cache:
+      enabled: true
