@@ -12,3 +12,5 @@ spec:
     tlsIssuer: letsencrypt-prod
     objectStorageRef:
       name: xobjectstorage-silver-jellybean
+    cache:
+      enabled: true
