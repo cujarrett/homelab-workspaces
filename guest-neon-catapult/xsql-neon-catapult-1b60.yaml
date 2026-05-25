@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-neon-catapult-1b60
+spec:
+  parameters:
+    namespace: guest-neon-catapult
+    backend: cluster
+    dataRetention: delete
