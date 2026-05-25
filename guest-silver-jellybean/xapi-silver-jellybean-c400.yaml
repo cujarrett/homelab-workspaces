@@ -1,0 +1,14 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-silver-jellybean-c400
+spec:
+  parameters:
+    namespace: guest-silver-jellybean
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    objectStorageRef:
+      name: xobjectstorage-silver-jellybean
