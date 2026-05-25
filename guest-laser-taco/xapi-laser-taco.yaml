@@ -1,0 +1,16 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-laser-taco
+spec:
+  parameters:
+    namespace: guest-laser-taco
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    objectStorageRef:
+      name: xobjectstorage-laser-taco
+    cache:
+      enabled: true
