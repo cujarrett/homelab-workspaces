@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-magic-pretzel
+spec:
+  parameters:
+    namespace: guest-magic-pretzel
+    backend: cluster
+    dataRetention: delete
