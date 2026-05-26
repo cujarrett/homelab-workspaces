@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: xobjectstorage-cosmic-penguin
+spec:
+  parameters:
+    namespace: guest-cosmic-penguin
+    dataRetention: delete
