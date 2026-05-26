@@ -6,7 +6,7 @@ metadata:
   name: launchpad-api
 spec:
   parameters:
-    image: ghcr.io/cujarrett/launchpad-api:sha-03a5bdb36f05f58c82f814bf250260af92f87093
+    image: ghcr.io/cujarrett/launchpad-api:sha-c4999e357fa81241134545de1121caf0612145cc
     repo: https://github.com/cujarrett/launchpad-api
     namespace: launchpad
     port: 8080
