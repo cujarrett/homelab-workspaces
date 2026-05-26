@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-phantom-pickle
+spec:
+  parameters:
+    namespace: guest-phantom-pickle
+    backend: cluster
+    dataRetention: delete
