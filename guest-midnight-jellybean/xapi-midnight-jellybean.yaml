@@ -12,5 +12,7 @@ spec:
     tlsIssuer: letsencrypt-prod
     sqlRef:
       name: xsql-midnight-jellybean
+    objectStorageRef:
+      name: xobjectstorage-midnight-jellybean
     cache:
       enabled: true
