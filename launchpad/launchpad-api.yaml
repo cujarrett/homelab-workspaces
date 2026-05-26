@@ -1,0 +1,15 @@
+# Cluster-internal only — no Ingress, no public hostname.
+# Secrets injected via the launchpad-secrets K8s Secret (create before applying):
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: launchpad-api
+spec:
+  parameters:
+    image: ghcr.io/cujarrett/launchpad-api:latest
+    repo: https://github.com/cujarrett/launchpad-api
+    namespace: launchpad
+    port: 8080
+    size: sm
+    secretRef:
+      name: launchpad-secrets
