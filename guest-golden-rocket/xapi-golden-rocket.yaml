@@ -1,0 +1,21 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-golden-rocket
+spec:
+  parameters:
+    namespace: guest-golden-rocket
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-golden-rocket
+    nosqlRef:
+      name: xnosql-golden-rocket
+    objectStorageRef:
+      name: xobjectstorage-golden-rocket
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
