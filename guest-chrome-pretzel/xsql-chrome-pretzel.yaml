@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-chrome-pretzel
+spec:
+  parameters:
+    namespace: guest-chrome-pretzel
+    backend: cluster
+    dataRetention: delete
