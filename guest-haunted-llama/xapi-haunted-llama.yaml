@@ -1,0 +1,21 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-haunted-llama
+spec:
+  parameters:
+    namespace: guest-haunted-llama
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-haunted-llama
+    nosqlRef:
+      name: xnosql-haunted-llama
+    objectStorageRef:
+      name: xobjectstorage-haunted-llama
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
