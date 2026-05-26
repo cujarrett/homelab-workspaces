@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-magic-taco
+spec:
+  parameters:
+    namespace: guest-magic-taco
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    nosqlRef:
+      name: xnosql-magic-taco
+    objectStorageRef:
+      name: xobjectstorage-magic-taco
+    readinessCheckPath: /readyz
