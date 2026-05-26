@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-midnight-submarine
+spec:
+  parameters:
+    namespace: guest-midnight-submarine
+    backend: cluster
+    dataRetention: delete
