@@ -1,0 +1,11 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSpa
+metadata:
+  name: xspa-velvet-cactus
+spec:
+  parameters:
+    namespace: guest-velvet-cactus
+    image: ghcr.io/cujarrett/hello-world-spa:latest
+    host: demo1.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    replicas: 1
