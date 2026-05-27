@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-laser-penguin
+spec:
+  parameters:
+    namespace: guest-laser-penguin
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-laser-penguin
+    objectStorageRef:
+      name: xobjectstorage-laser-penguin
+    readinessCheckPath: /readyz
