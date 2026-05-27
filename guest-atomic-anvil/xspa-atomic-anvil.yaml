@@ -1,0 +1,11 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSpa
+metadata:
+  name: xspa-atomic-anvil
+spec:
+  parameters:
+    namespace: guest-atomic-anvil
+    image: ghcr.io/cujarrett/hello-world-spa:latest
+    host: demo4.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    replicas: 1
