@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-blazing-burrito
+spec:
+  parameters:
+    namespace: guest-blazing-burrito
+    backend: cluster
+    dataRetention: delete
