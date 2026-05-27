@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-haunted-taco
-spec:
-  parameters:
-    namespace: guest-haunted-taco
-    dataRetention: delete
