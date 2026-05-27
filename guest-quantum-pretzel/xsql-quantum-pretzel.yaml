@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-quantum-pretzel
-spec:
-  parameters:
-    namespace: guest-quantum-pretzel
-    backend: cluster
-    dataRetention: delete
