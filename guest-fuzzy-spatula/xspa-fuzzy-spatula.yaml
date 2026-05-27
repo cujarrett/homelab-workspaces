@@ -1,0 +1,11 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSpa
+metadata:
+  name: xspa-fuzzy-spatula
+spec:
+  parameters:
+    namespace: guest-fuzzy-spatula
+    image: ghcr.io/cujarrett/hello-world-spa:latest
+    host: demo5.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    replicas: 1
