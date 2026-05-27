@@ -15,7 +15,7 @@ spec:
     contentSecurityPolicy: >-
       default-src 'self';
       style-src 'self' 'unsafe-inline';
-      connect-src 'self' https://login.microsoftonline.com https://*.microsoftonline.com;
+      connect-src 'self' https://*.mattjarrett.dev https://login.microsoftonline.com https://*.microsoftonline.com;
       frame-ancestors 'none';
       base-uri 'self';
     apiProxy:
