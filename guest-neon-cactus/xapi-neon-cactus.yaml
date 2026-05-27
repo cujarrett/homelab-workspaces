@@ -10,8 +10,6 @@ spec:
     replicas: 1
     host: demo1-api.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
-    sqlRef:
-      name: xsql-neon-cactus
     cache:
       enabled: true
     readinessCheckPath: /readyz
