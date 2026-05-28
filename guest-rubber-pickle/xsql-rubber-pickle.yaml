@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-rubber-pickle
+spec:
+  parameters:
+    namespace: guest-rubber-pickle
+    backend: cluster
+    dataRetention: delete
