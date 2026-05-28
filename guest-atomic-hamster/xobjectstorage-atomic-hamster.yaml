@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: xobjectstorage-atomic-hamster
+spec:
+  parameters:
+    namespace: guest-atomic-hamster
+    dataRetention: delete
