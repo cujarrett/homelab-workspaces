@@ -10,4 +10,6 @@ spec:
     replicas: 1
     host: demo5-api.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
+    nosqlRef:
+      name: xnosql-chrome-submarine
     readinessCheckPath: /readyz
