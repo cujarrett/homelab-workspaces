@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-atomic-burrito
+spec:
+  parameters:
+    namespace: guest-atomic-burrito
+    backend: cluster
+    dataRetention: delete
