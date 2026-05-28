@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-shadow-submarine
-spec:
-  parameters:
-    namespace: guest-shadow-submarine
-    dataRetention: delete
