@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-cosmic-jellybean
-spec:
-  parameters:
-    namespace: guest-cosmic-jellybean
-    backend: cluster
-    dataRetention: delete
