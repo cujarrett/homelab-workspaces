@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-cosmic-jellybean
-spec:
-  parameters:
-    namespace: guest-cosmic-jellybean
-    dataRetention: delete
