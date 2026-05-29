@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-velvet-hamster
-spec:
-  parameters:
-    namespace: guest-velvet-hamster
-    dataRetention: delete
