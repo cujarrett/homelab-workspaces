@@ -1,0 +1,21 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-cosmic-jellybean
+spec:
+  parameters:
+    namespace: guest-cosmic-jellybean
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-cosmic-jellybean
+    nosqlRef:
+      name: xnosql-cosmic-jellybean
+    objectStorageRef:
+      name: xobjectstorage-cosmic-jellybean
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
