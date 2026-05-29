@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: xobjectstorage-banana-cannon
+spec:
+  parameters:
+    namespace: guest-banana-cannon
+    dataRetention: delete
