@@ -1,0 +1,21 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-velvet-rocket
+spec:
+  parameters:
+    namespace: guest-velvet-rocket
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-velvet-rocket
+    nosqlRef:
+      name: xnosql-velvet-rocket
+    objectStorageRef:
+      name: xobjectstorage-velvet-rocket
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
