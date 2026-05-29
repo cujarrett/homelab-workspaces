@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-midnight-pretzel
+spec:
+  parameters:
+    namespace: guest-midnight-pretzel
+    backend: cluster
+    dataRetention: delete
