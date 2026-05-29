@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-disco-wizard
+spec:
+  parameters:
+    namespace: guest-disco-wizard
+    backend: cluster
+    dataRetention: delete
