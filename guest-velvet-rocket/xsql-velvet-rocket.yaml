@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-velvet-rocket
-spec:
-  parameters:
-    namespace: guest-velvet-rocket
-    backend: cluster
-    dataRetention: delete
