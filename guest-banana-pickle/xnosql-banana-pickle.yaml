@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-banana-pickle
-spec:
-  parameters:
-    namespace: guest-banana-pickle
-    dataRetention: delete
