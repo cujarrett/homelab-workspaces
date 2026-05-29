@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-laser-pickle
-spec:
-  parameters:
-    namespace: guest-laser-pickle
-    dataRetention: delete
