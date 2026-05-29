@@ -1,0 +1,21 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-velvet-hamster
+spec:
+  parameters:
+    namespace: guest-velvet-hamster
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-velvet-hamster
+    nosqlRef:
+      name: xnosql-velvet-hamster
+    objectStorageRef:
+      name: xobjectstorage-velvet-hamster
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
