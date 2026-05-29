@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-magic-napkin
+spec:
+  parameters:
+    namespace: guest-magic-napkin
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    objectStorageRef:
+      name: xobjectstorage-magic-napkin
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
