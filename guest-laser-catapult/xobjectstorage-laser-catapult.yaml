@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-laser-catapult
-spec:
-  parameters:
-    namespace: guest-laser-catapult
-    dataRetention: delete
