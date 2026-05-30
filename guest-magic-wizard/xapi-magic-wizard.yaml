@@ -10,8 +10,4 @@ spec:
     replicas: 1
     host: demo3-api.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
-    sqlRef:
-      name: xsql-magic-wizard
-    cache:
-      enabled: true
     readinessCheckPath: /readyz
