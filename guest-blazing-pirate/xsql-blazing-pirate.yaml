@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-blazing-pirate
-spec:
-  parameters:
-    namespace: guest-blazing-pirate
-    backend: cluster
-    dataRetention: delete
