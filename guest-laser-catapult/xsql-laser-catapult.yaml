@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-laser-catapult
+spec:
+  parameters:
+    namespace: guest-laser-catapult
+    backend: cluster
+    dataRetention: delete
