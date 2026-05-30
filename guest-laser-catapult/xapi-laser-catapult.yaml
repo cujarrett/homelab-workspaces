@@ -1,0 +1,21 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-laser-catapult
+spec:
+  parameters:
+    namespace: guest-laser-catapult
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo5-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-laser-catapult
+    nosqlRef:
+      name: xnosql-laser-catapult
+    objectStorageRef:
+      name: xobjectstorage-laser-catapult
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
