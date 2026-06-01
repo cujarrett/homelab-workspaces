@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-quantum-cassette
+spec:
+  parameters:
+    namespace: guest-quantum-cassette
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    objectStorageRef:
+      name: xobjectstorage-quantum-cassette
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
