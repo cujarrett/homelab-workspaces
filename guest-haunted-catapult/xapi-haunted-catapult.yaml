@@ -1,0 +1,15 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-haunted-catapult
+spec:
+  parameters:
+    namespace: guest-haunted-catapult
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
