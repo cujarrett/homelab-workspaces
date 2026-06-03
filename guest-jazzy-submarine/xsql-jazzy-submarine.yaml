@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-jazzy-submarine
+spec:
+  parameters:
+    namespace: guest-jazzy-submarine
+    backend: cluster
+    dataRetention: delete
