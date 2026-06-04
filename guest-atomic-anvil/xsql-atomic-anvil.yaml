@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-atomic-anvil
+spec:
+  parameters:
+    namespace: guest-atomic-anvil
+    backend: cluster
+    dataRetention: delete
