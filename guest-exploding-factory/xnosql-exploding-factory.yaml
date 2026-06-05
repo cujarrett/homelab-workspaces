@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XNoSql
+metadata:
+  name: xnosql-exploding-factory
+spec:
+  parameters:
+    namespace: guest-exploding-factory
+    dataRetention: delete
