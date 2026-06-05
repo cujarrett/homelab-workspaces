@@ -1,0 +1,15 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-exploding-factory
+spec:
+  parameters:
+    namespace: guest-exploding-factory
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    nosqlRef:
+      name: xnosql-exploding-factory
+    readinessCheckPath: /readyz
