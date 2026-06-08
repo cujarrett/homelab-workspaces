@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-neon-factory
+spec:
+  parameters:
+    namespace: guest-neon-factory
+    backend: cluster
+    dataRetention: delete
