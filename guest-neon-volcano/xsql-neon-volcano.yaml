@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-neon-volcano
+spec:
+  parameters:
+    namespace: guest-neon-volcano
+    backend: cluster
+    dataRetention: delete
