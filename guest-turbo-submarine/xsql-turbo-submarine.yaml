@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-turbo-submarine
-spec:
-  parameters:
-    namespace: guest-turbo-submarine
-    backend: cluster
-    dataRetention: delete
