@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-disco-waffle
+spec:
+  parameters:
+    namespace: guest-disco-waffle
+    backend: cluster
+    dataRetention: delete
