@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-atomic-waffle
+spec:
+  parameters:
+    namespace: guest-atomic-waffle
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-atomic-waffle
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
