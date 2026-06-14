@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-frozen-hamster
-spec:
-  parameters:
-    namespace: guest-frozen-hamster
-    backend: cluster
-    dataRetention: delete
