@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-disco-spatula
+spec:
+  parameters:
+    namespace: guest-disco-spatula
+    backend: cluster
+    dataRetention: delete
