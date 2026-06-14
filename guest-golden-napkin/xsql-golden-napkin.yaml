@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-golden-napkin
+spec:
+  parameters:
+    namespace: guest-golden-napkin
+    backend: cluster
+    dataRetention: delete
