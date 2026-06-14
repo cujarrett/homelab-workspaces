@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-haunted-cactus
+spec:
+  parameters:
+    namespace: guest-haunted-cactus
+    backend: cluster
+    dataRetention: delete
