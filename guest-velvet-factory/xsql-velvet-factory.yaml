@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-velvet-factory
+spec:
+  parameters:
+    namespace: guest-velvet-factory
+    backend: cluster
+    dataRetention: delete
