@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-rubber-pretzel
+spec:
+  parameters:
+    namespace: guest-rubber-pretzel
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo5-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-rubber-pretzel
+    cache:
+      enabled: true
+    readinessCheckPath: /readyz
