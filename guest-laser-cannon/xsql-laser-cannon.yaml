@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-laser-cannon
+spec:
+  parameters:
+    namespace: guest-laser-cannon
+    backend: cluster
+    dataRetention: delete
