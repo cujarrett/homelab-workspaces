@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-midnight-spatula
+spec:
+  parameters:
+    namespace: guest-midnight-spatula
+    backend: cluster
+    dataRetention: delete
