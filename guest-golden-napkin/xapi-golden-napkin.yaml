@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-golden-napkin
+spec:
+  parameters:
+    namespace: guest-golden-napkin
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-golden-napkin
+    objectStorageRef:
+      name: xobjectstorage-golden-napkin
+    readinessCheckPath: /readyz
