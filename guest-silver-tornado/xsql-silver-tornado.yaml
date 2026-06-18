@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-silver-tornado
+spec:
+  parameters:
+    namespace: guest-silver-tornado
+    backend: cluster
+    dataRetention: delete
