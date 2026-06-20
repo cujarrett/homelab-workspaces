@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-golden-factory
+spec:
+  parameters:
+    namespace: guest-golden-factory
+    backend: private-cloud
+    dataRetention: delete
