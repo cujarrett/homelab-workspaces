@@ -1,0 +1,16 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-laser-rocket
+spec:
+  parameters:
+    namespace: guest-laser-rocket
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
