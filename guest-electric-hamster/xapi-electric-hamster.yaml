@@ -1,0 +1,19 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-electric-hamster
+spec:
+  parameters:
+    namespace: guest-electric-hamster
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-electric-hamster
+      backend: private-cloud
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
