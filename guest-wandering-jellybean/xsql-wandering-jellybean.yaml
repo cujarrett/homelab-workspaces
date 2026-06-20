@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-wandering-jellybean
+spec:
+  parameters:
+    namespace: guest-wandering-jellybean
+    backend: private-cloud
+    dataRetention: delete
