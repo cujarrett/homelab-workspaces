@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: xobjectstorage-magic-penguin
+spec:
+  parameters:
+    namespace: guest-magic-penguin
+    dataRetention: delete
