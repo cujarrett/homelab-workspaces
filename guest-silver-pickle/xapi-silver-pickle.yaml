@@ -1,0 +1,19 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-silver-pickle
+spec:
+  parameters:
+    namespace: guest-silver-pickle
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    sqlRef:
+      name: xsql-silver-pickle
+      backend: private-cloud
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
