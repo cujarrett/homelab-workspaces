@@ -1,0 +1,13 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-velvet-cassette
+spec:
+  parameters:
+    namespace: guest-velvet-cassette
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    readinessCheckPath: /readyz
