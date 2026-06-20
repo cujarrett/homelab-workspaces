@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-blazing-pirate
-spec:
-  parameters:
-    namespace: guest-blazing-pirate
-    dataRetention: delete
