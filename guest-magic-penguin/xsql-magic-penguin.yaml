@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-magic-penguin
-spec:
-  parameters:
-    namespace: guest-magic-penguin
-    backend: private-cloud
-    dataRetention: delete
