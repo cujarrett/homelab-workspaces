@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-turbo-factory
-spec:
-  parameters:
-    namespace: guest-turbo-factory
-    dataRetention: delete
