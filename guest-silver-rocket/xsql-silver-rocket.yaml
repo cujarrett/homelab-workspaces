@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-silver-rocket
-spec:
-  parameters:
-    namespace: guest-silver-rocket
-    backend: private-cloud
-    dataRetention: delete
