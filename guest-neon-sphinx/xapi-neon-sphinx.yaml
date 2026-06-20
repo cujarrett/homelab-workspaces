@@ -1,0 +1,16 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-neon-sphinx
+spec:
+  parameters:
+    namespace: guest-neon-sphinx
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
