@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XNoSql
+metadata:
+  name: xnosql-frozen-wizard
+spec:
+  parameters:
+    namespace: guest-frozen-wizard
+    dataRetention: delete
