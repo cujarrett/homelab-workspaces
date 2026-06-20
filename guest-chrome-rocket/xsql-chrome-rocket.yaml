@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-chrome-rocket
-spec:
-  parameters:
-    namespace: guest-chrome-rocket
-    backend: private-cloud
-    dataRetention: delete
