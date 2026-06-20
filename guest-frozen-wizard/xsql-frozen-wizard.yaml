@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-frozen-wizard
+spec:
+  parameters:
+    namespace: guest-frozen-wizard
+    backend: private-cloud
+    dataRetention: delete
