@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-turbo-napkin
+spec:
+  parameters:
+    namespace: guest-turbo-napkin
+    backend: private-cloud
+    dataRetention: delete
