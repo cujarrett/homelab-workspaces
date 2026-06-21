@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-banana-waffle
-spec:
-  parameters:
-    namespace: guest-banana-waffle
-    backend: private-cloud
-    dataRetention: delete
