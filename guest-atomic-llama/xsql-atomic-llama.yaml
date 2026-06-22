@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-atomic-llama
-spec:
-  parameters:
-    namespace: guest-atomic-llama
-    backend: private-cloud
-    dataRetention: delete
