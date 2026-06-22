@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-electric-burrito
-spec:
-  parameters:
-    namespace: guest-electric-burrito
-    dataRetention: delete
