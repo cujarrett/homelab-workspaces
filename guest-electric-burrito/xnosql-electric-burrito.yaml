@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-electric-burrito
-spec:
-  parameters:
-    namespace: guest-electric-burrito
-    dataRetention: delete
