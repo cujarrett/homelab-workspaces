@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-atomic-factory
-spec:
-  parameters:
-    namespace: guest-atomic-factory
-    backend: private-cloud
-    dataRetention: delete
