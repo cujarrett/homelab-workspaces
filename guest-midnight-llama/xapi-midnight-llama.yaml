@@ -1,0 +1,21 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-midnight-llama
+spec:
+  parameters:
+    namespace: guest-midnight-llama
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo5-api.mattjarrett.dev
+    tlsSecret: demo5-api-tls
+    sqlRef:
+      name: xsql-midnight-llama
+      backend: private-cloud
+    nosqlRef:
+      name: xnosql-midnight-llama
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
