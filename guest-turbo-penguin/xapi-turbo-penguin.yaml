@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-turbo-penguin
+spec:
+  parameters:
+    namespace: guest-turbo-penguin
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsSecret: demo3-api-tls
+    sqlRef:
+      name: xsql-turbo-penguin
+      backend: private-cloud
+    nosqlRef:
+      name: xnosql-turbo-penguin
+    objectStorageRefs:
+      - name: xobjectstorage-turbo-penguin
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
