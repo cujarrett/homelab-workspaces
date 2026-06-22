@@ -38,3 +38,67 @@ subjects:
   - kind: ServiceAccount
     name: launchpad-api
     namespace: launchpad
+---
+# Allows launchpad-api to read the 10 pre-provisioned demo slot TLS secrets from
+# the demo-certs namespace so it can copy them into guest workspace namespaces.
+# resourceNames locks this down to exactly those secrets — no other secrets in
+# demo-certs are readable by this SA.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: launchpad-api-demo-certs-reader
+  namespace: demo-certs
+rules:
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["get"]
+    resourceNames:
+      - demo1-tls
+      - demo1-api-tls
+      - demo2-tls
+      - demo2-api-tls
+      - demo3-tls
+      - demo3-api-tls
+      - demo4-tls
+      - demo4-api-tls
+      - demo5-tls
+      - demo5-api-tls
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: launchpad-api-demo-certs-reader
+  namespace: demo-certs
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: launchpad-api-demo-certs-reader
+subjects:
+  - kind: ServiceAccount
+    name: launchpad-api
+    namespace: launchpad
+---
+# Allows launchpad-api to copy TLS secrets into dynamically-created guest
+# namespaces. Scoped to create-only — the SA cannot read, list, update, or
+# delete secrets in guest namespaces through this grant.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: launchpad-api-guest-secret-creator
+rules:
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["create"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: launchpad-api-guest-secret-creator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: launchpad-api-guest-secret-creator
+subjects:
+  - kind: ServiceAccount
+    name: launchpad-api
+    namespace: launchpad
