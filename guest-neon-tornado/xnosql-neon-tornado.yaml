@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XNoSql
+metadata:
+  name: xnosql-neon-tornado
+spec:
+  parameters:
+    namespace: guest-neon-tornado
+    dataRetention: delete
