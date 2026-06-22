@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-midnight-penguin
+spec:
+  parameters:
+    namespace: guest-midnight-penguin
+    backend: private-cloud
+    dataRetention: delete
