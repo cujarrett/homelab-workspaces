@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-electric-burrito
-spec:
-  parameters:
-    namespace: guest-electric-burrito
-    backend: private-cloud
-    dataRetention: delete
