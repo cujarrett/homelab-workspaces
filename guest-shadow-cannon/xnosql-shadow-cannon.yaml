@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-shadow-cannon
-spec:
-  parameters:
-    namespace: guest-shadow-cannon
-    dataRetention: delete
