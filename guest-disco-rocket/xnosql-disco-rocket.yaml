@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XNoSql
+metadata:
+  name: xnosql-disco-rocket
+spec:
+  parameters:
+    namespace: guest-disco-rocket
+    dataRetention: delete
