@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-atomic-llama
+spec:
+  parameters:
+    namespace: guest-atomic-llama
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsSecret: demo1-api-tls
+    sqlRef:
+      name: xsql-atomic-llama
+      backend: private-cloud
+    nosqlRef:
+      name: xnosql-atomic-llama
+    objectStorageRefs:
+      - name: xobjectstorage-atomic-llama
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
