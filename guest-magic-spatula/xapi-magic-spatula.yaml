@@ -1,0 +1,20 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-magic-spatula
+spec:
+  parameters:
+    namespace: guest-magic-spatula
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    nosqlRef:
+      name: xnosql-magic-spatula
+    objectStorageRefs:
+      - name: xobjectstorage-magic-spatula
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
