@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-fuzzy-hamster
+spec:
+  parameters:
+    namespace: guest-fuzzy-hamster
+    backend: private-cloud
+    dataRetention: delete
