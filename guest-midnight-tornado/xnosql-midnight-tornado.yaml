@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-midnight-tornado
-spec:
-  parameters:
-    namespace: guest-midnight-tornado
-    dataRetention: delete
