@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-laser-spatula
+spec:
+  parameters:
+    namespace: guest-laser-spatula
+    backend: private-cloud
+    dataRetention: delete
