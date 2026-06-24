@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: guest-frozen-burrito
+  annotations:
+    linkerd.io/inject: enabled
