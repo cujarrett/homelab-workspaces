@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-quantum-cactus
+spec:
+  parameters:
+    namespace: guest-quantum-cactus
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsSecret: demo2-api-tls
+    sqlRef:
+      name: xsql-quantum-cactus
+      backend: private-cloud
+    nosqlRef:
+      name: xnosql-quantum-cactus
+    objectStorageRefs:
+      - name: xobjectstorage-quantum-cactus
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
