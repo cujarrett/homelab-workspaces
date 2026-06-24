@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-velvet-anvil
+spec:
+  parameters:
+    namespace: guest-velvet-anvil
+    backend: private-cloud
+    dataRetention: delete
