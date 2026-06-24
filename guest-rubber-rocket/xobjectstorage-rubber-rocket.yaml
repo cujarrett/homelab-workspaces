@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: xobjectstorage-rubber-rocket
-spec:
-  parameters:
-    namespace: guest-rubber-rocket
-    dataRetention: delete
