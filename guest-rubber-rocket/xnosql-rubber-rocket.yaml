@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: xnosql-rubber-rocket
-spec:
-  parameters:
-    namespace: guest-rubber-rocket
-    dataRetention: delete
