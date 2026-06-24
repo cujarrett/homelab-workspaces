@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: xsql-magic-factory
-spec:
-  parameters:
-    namespace: guest-magic-factory
-    backend: private-cloud
-    dataRetention: delete
