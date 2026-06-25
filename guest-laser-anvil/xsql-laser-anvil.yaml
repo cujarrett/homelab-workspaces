@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-laser-anvil
+spec:
+  parameters:
+    namespace: guest-laser-anvil
+    backend: private-cloud
+    dataRetention: delete
