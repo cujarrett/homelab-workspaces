@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-banana-toaster
+spec:
+  parameters:
+    namespace: guest-banana-toaster
+    backend: private-cloud
+    dataRetention: delete
