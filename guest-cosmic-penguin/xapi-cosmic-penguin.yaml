@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: xapi-cosmic-penguin
+spec:
+  parameters:
+    namespace: guest-cosmic-penguin
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo5-api.mattjarrett.dev
+    tlsSecret: demo5-api-tls
+    sqlRef:
+      name: xsql-cosmic-penguin
+      backend: private-cloud
+    nosqlRef:
+      name: xnosql-cosmic-penguin
+    objectStorageRefs:
+      - name: xobjectstorage-cosmic-penguin
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
