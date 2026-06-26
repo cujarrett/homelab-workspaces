@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: sql
-spec:
-  parameters:
-    namespace: guest-frozen-factory
-    backend: private-cloud
-    dataRetention: delete
