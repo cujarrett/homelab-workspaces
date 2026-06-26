@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XNoSql
+metadata:
+  name: nosql
+spec:
+  parameters:
+    namespace: guest-quantum-factory
+    dataRetention: delete
