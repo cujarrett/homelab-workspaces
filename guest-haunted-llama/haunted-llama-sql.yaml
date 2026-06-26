@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: haunted-llama-sql
+spec:
+  parameters:
+    namespace: guest-haunted-llama
+    backend: private-cloud
+    dataRetention: delete
