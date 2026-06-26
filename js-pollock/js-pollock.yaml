@@ -5,7 +5,7 @@ metadata:
 spec:
   parameters:
     namespace: js-pollock
-    image: ghcr.io/cujarrett/js-pollock:sha-85fb3535eb0d96854721d7d187124504f1055186
+    image: ghcr.io/cujarrett/js-pollock:sha-2c18487cbedb5806f4ff4afbc0ced2f7e13b45bc
     repo: https://github.com/cujarrett/js-pollock
     host: jspollock.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
