@@ -1,0 +1,18 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: api
+spec:
+  parameters:
+    namespace: guest-frozen-tornado
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsSecret: demo4-api-tls
+    objectStorageRefs:
+      - name: store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
