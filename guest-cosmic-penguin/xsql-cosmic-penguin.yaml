@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: xsql-cosmic-penguin
+spec:
+  parameters:
+    namespace: guest-cosmic-penguin
+    backend: private-cloud
+    dataRetention: delete
