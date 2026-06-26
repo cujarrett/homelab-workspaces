@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: sql
+spec:
+  parameters:
+    namespace: guest-golden-rocket
+    backend: private-cloud
+    dataRetention: delete
