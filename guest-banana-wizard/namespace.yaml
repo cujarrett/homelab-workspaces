@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: guest-banana-wizard
-  annotations:
-    linkerd.io/inject: enabled
