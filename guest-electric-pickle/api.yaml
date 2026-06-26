@@ -1,0 +1,18 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: api
+spec:
+  parameters:
+    namespace: guest-electric-pickle
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsSecret: demo3-api-tls
+    objectStorageRefs:
+      - name: store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
