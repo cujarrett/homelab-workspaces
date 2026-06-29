@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: fuzzy-cannon-sql
+spec:
+  parameters:
+    namespace: guest-fuzzy-cannon
+    backend: private-cloud
+    dataRetention: delete
