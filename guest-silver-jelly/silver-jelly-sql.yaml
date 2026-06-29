@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: silver-jelly-sql
+spec:
+  parameters:
+    namespace: guest-silver-jelly
+    backend: private-cloud
+    dataRetention: delete
