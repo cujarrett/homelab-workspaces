@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: cosmic-cactus-store
-spec:
-  parameters:
-    namespace: guest-cosmic-cactus
-    dataRetention: delete
