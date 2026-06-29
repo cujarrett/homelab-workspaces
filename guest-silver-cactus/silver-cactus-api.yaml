@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: silver-cactus-api
+spec:
+  parameters:
+    namespace: guest-silver-cactus
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo5-api.mattjarrett.dev
+    tlsSecret: demo5-api-tls
+    sqlRef:
+      name: silver-cactus-sql
+      backend: private-cloud
+    nosqlRef:
+      name: silver-cactus-nosql
+    objectStorageRefs:
+      - name: silver-cactus-store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
