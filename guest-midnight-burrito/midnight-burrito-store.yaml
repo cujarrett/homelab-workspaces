@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: midnight-burrito-store
+spec:
+  parameters:
+    namespace: guest-midnight-burrito
+    dataRetention: delete
