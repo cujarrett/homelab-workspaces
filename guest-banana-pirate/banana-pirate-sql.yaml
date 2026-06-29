@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: banana-pirate-sql
-spec:
-  parameters:
-    namespace: guest-banana-pirate
-    backend: private-cloud
-    dataRetention: delete
