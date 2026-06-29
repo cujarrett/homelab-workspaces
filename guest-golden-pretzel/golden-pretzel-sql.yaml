@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: golden-pretzel-sql
+spec:
+  parameters:
+    namespace: guest-golden-pretzel
+    backend: private-cloud
+    dataRetention: delete
