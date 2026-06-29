@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: neon-spatula-nosql
-spec:
-  parameters:
-    namespace: guest-neon-spatula
-    dataRetention: delete
