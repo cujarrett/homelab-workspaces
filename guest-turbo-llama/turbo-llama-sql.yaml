@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: turbo-llama-sql
-spec:
-  parameters:
-    namespace: guest-turbo-llama
-    backend: private-cloud
-    dataRetention: delete
