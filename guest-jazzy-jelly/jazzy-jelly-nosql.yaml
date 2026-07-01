@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: jazzy-jelly-nosql
-spec:
-  parameters:
-    namespace: guest-jazzy-jelly
-    dataRetention: delete
