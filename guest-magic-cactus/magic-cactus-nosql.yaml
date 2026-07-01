@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: magic-cactus-nosql
-spec:
-  parameters:
-    namespace: guest-magic-cactus
-    dataRetention: delete
