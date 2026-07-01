@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: laser-napkin-api
+spec:
+  parameters:
+    namespace: guest-laser-napkin
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo1-api.mattjarrett.dev
+    tlsSecret: demo1-api-tls
+    sqlRef:
+      name: laser-napkin-sql
+      backend: private-cloud
+    nosqlRef:
+      name: laser-napkin-nosql
+    objectStorageRefs:
+      - name: laser-napkin-store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
