@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: laser-napkin-store
-spec:
-  parameters:
-    namespace: guest-laser-napkin
-    dataRetention: delete
