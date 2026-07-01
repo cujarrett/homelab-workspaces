@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: silver-napkin-sql
+spec:
+  parameters:
+    namespace: guest-silver-napkin
+    backend: private-cloud
+    dataRetention: delete
