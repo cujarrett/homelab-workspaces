@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: frozen-penguin-sql
+spec:
+  parameters:
+    namespace: guest-frozen-penguin
+    backend: private-cloud
+    dataRetention: delete
