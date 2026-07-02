@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: jazzy-wizard-api
+spec:
+  parameters:
+    namespace: guest-jazzy-wizard
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsSecret: demo4-api-tls
+    sqlRef:
+      name: jazzy-wizard-sql
+      backend: private-cloud
+    nosqlRef:
+      name: jazzy-wizard-nosql
+    objectStorageRefs:
+      - name: jazzy-wizard-store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
