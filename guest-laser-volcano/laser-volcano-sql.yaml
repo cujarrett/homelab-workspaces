@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: laser-volcano-sql
+spec:
+  parameters:
+    namespace: guest-laser-volcano
+    backend: private-cloud
+    dataRetention: delete
