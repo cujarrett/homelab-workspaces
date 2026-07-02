@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: laser-volcano-store
+spec:
+  parameters:
+    namespace: guest-laser-volcano
+    dataRetention: delete
