@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: shadow-cannon-api
+spec:
+  parameters:
+    namespace: guest-shadow-cannon
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsSecret: demo2-api-tls
+    sqlRef:
+      name: shadow-cannon-sql
+      backend: private-cloud
+    nosqlRef:
+      name: shadow-cannon-nosql
+    objectStorageRefs:
+      - name: shadow-cannon-store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
