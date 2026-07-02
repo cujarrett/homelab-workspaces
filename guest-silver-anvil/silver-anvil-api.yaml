@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: silver-anvil-api
+spec:
+  parameters:
+    namespace: guest-silver-anvil
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsSecret: demo4-api-tls
+    sqlRef:
+      name: silver-anvil-sql
+      backend: private-cloud
+    nosqlRef:
+      name: silver-anvil-nosql
+    objectStorageRefs:
+      - name: silver-anvil-store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
