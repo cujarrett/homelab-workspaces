@@ -1,0 +1,19 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: blazing-hamster-api
+spec:
+  parameters:
+    namespace: guest-blazing-hamster
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo2-api.mattjarrett.dev
+    tlsSecret: demo2-api-tls
+    sqlRef:
+      name: blazing-hamster-sql
+      backend: private-cloud
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
