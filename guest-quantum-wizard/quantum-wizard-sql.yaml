@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: quantum-wizard-sql
+spec:
+  parameters:
+    namespace: guest-quantum-wizard
+    backend: private-cloud
+    dataRetention: delete
