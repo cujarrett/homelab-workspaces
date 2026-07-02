@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: magic-llama-sql
-spec:
-  parameters:
-    namespace: guest-magic-llama
-    backend: private-cloud
-    dataRetention: delete
