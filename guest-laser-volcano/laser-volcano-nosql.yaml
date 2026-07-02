@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: laser-volcano-nosql
-spec:
-  parameters:
-    namespace: guest-laser-volcano
-    dataRetention: delete
