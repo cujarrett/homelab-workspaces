@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: shadow-llama-sql
+spec:
+  parameters:
+    namespace: guest-shadow-llama
+    backend: private-cloud
+    dataRetention: delete
