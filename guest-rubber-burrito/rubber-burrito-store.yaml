@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: rubber-burrito-store
-spec:
-  parameters:
-    namespace: guest-rubber-burrito
-    dataRetention: delete
