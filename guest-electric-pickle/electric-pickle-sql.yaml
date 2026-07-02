@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: electric-pickle-sql
+spec:
+  parameters:
+    namespace: guest-electric-pickle
+    backend: private-cloud
+    dataRetention: delete
