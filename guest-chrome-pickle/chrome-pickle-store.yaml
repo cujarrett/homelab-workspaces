@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: chrome-pickle-store
-spec:
-  parameters:
-    namespace: guest-chrome-pickle
-    dataRetention: delete
