@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: atomic-cannon-sql
-spec:
-  parameters:
-    namespace: guest-atomic-cannon
-    backend: private-cloud
-    dataRetention: delete
