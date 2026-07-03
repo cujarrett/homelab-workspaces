@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: velvet-burrito-sql
+spec:
+  parameters:
+    namespace: guest-velvet-burrito
+    backend: private-cloud
+    dataRetention: delete
