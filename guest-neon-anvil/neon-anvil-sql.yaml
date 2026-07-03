@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: neon-anvil-sql
+spec:
+  parameters:
+    namespace: guest-neon-anvil
+    backend: private-cloud
+    dataRetention: delete
