@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: golden-waffle-sql
+spec:
+  parameters:
+    namespace: guest-golden-waffle
+    backend: private-cloud
+    dataRetention: delete
