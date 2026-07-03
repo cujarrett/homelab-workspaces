@@ -7,7 +7,7 @@ spec:
     namespace: guest-velvet-taco
     image: ghcr.io/cujarrett/hello-world-api:latest
     port: 8080
-    replicas: 1
+    replicas: 20
     host: demo5-api.mattjarrett.dev
     tlsSecret: demo5-api-tls
     sqlRef:
