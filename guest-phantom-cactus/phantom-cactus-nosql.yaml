@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: phantom-cactus-nosql
-spec:
-  parameters:
-    namespace: guest-phantom-cactus
-    dataRetention: delete
