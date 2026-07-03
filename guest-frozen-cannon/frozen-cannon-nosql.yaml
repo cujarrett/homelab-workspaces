@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: frozen-cannon-nosql
-spec:
-  parameters:
-    namespace: guest-frozen-cannon
-    dataRetention: delete
