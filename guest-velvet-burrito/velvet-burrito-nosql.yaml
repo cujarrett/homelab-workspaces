@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: velvet-burrito-nosql
-spec:
-  parameters:
-    namespace: guest-velvet-burrito
-    dataRetention: delete
