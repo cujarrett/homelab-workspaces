@@ -107,7 +107,15 @@ subjects:
 ---
 # Allows launchpad-api to copy TLS secrets into dynamically-created guest
 # namespaces. Scoped to create-only — the SA cannot read, list, update, or
-# delete secrets in guest namespaces through this grant.
+# delete secrets through this grant.
+#
+# This ClusterRole is broader than the actual use case: RBAC cannot express
+# "create only in guest-* namespaces, only these 10 names" (no namespace-prefix
+# selector, and resourceNames does not apply to create). The real scoping is
+# enforced at admission time by a ValidatingAdmissionPolicy in the homelab repo
+# — see cluster/policies/launchpad-guest-secret-scope.yaml. That policy is the
+# actual boundary; this ClusterRole alone would allow creating a Secret in any
+# namespace with any name.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
