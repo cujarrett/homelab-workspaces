@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: turbo-penguin-sql
+spec:
+  parameters:
+    namespace: guest-turbo-penguin
+    backend: private-cloud
+    dataRetention: delete
