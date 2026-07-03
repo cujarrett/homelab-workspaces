@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: atomic-factory-store
-spec:
-  parameters:
-    namespace: guest-atomic-factory
-    dataRetention: delete
