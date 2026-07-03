@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: chrome-napkin-sql
+spec:
+  parameters:
+    namespace: guest-chrome-napkin
+    backend: private-cloud
+    dataRetention: delete
