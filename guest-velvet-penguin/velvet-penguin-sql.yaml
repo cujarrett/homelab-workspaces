@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XSql
-metadata:
-  name: velvet-penguin-sql
-spec:
-  parameters:
-    namespace: guest-velvet-penguin
-    backend: private-cloud
-    dataRetention: delete
