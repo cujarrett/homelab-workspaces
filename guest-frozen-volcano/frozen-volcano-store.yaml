@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: frozen-volcano-store
-spec:
-  parameters:
-    namespace: guest-frozen-volcano
-    dataRetention: delete
