@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: electric-anvil-sql
+spec:
+  parameters:
+    namespace: guest-electric-anvil
+    backend: private-cloud
+    dataRetention: delete
