@@ -4,7 +4,7 @@ metadata:
   name: kentjarrett-com
 spec:
   parameters:
-    host: kentjarrett.mattjarrett.dev
+    host: kentjarrett.com
     storageSize: "10Gi"
     dbStorageSize: "2Gi"
     replicas: 1
