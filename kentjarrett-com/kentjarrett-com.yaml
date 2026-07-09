@@ -1,0 +1,12 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XWordpress
+metadata:
+  name: kentjarrett-com
+spec:
+  parameters:
+    host: kentjarrett.mattjarrett.dev
+    storageSize: "10Gi"
+    dbStorageSize: "2Gi"
+    replicas: 1
+    size: md
+    dataRetention: retain
