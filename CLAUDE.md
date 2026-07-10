@@ -1,6 +1,6 @@
 # homelab-workspaces
 
-XR instance files for all workspace apps running on the [homelab](https://github.com/cujarrett/homelab) cluster. Workspace directories are hand-maintained, except the ephemeral `demo{1-5}` sandbox directories, which are written and deleted automatically by `launchpad-api` via the GitHub Contents/Git Data API.
+XR instance files for all workspace apps running on the [homelab](https://github.com/cujarrett/homelab) cluster. Workspace directories are hand-maintained, except the `guest-` ephemeral `demo{1-5}` sandbox directories, which are written and deleted automatically by `launchpad-api` via the GitHub Contents/Git Data API.
 
 ## Rules
 
