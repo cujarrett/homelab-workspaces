@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: jazzy-hamster-nosql
-spec:
-  parameters:
-    namespace: guest-jazzy-hamster
-    dataRetention: delete
