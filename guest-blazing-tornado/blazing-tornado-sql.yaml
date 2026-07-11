@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: blazing-tornado-sql
+spec:
+  parameters:
+    namespace: guest-blazing-tornado
+    backend: private-cloud
+    dataRetention: delete
