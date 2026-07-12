@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: cosmic-pickle-store
-spec:
-  parameters:
-    namespace: guest-cosmic-pickle
-    dataRetention: delete
