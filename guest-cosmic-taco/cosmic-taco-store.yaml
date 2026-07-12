@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XObjectStorage
-metadata:
-  name: cosmic-taco-store
-spec:
-  parameters:
-    namespace: guest-cosmic-taco
-    dataRetention: delete
