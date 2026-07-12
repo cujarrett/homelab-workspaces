@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: cosmic-pickle-api
+spec:
+  parameters:
+    namespace: guest-cosmic-pickle
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsSecret: demo4-api-tls
+    sqlRef:
+      name: cosmic-pickle-sql
+      backend: private-cloud
+    nosqlRef:
+      name: cosmic-pickle-nosql
+    objectStorageRefs:
+      - name: cosmic-pickle-store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
