@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: guest-fuzzy-tornado
+  annotations:
+    linkerd.io/inject: enabled
