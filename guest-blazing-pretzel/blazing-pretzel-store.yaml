@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: blazing-pretzel-store
+spec:
+  parameters:
+    namespace: guest-blazing-pretzel
+    dataRetention: delete
