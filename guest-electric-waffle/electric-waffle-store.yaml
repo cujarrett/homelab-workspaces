@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XObjectStorage
+metadata:
+  name: electric-waffle-store
+spec:
+  parameters:
+    namespace: guest-electric-waffle
+    dataRetention: delete
