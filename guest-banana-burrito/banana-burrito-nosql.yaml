@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: XNoSql
-metadata:
-  name: banana-burrito-nosql
-spec:
-  parameters:
-    namespace: guest-banana-burrito
-    dataRetention: delete
