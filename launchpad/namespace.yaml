@@ -2,5 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: launchpad
-  labels:
-    istio-injection: enabled
+  # NOT meshed: launchpad-api (BFF) holds long-lived K8s watch streams on every platform XR
+  # kind (watcher.go) to power the UI's live status (SSE), plus apiserver/GitHub calls to
+  # provision sandboxes. The istio-proxy sidecar intercepts apiserver :443 and cuts those
+  # long-lived watch streams ("watch channel closed, restarting"), so it stays unmeshed.
