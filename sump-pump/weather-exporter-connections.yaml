@@ -1,0 +1,13 @@
+# serviceAccount: weather-exporter is this instance's own SA, distinct from the other two XApis in sump-pump.
+apiVersion: platform.local.lab/v1alpha1
+kind: XConnection
+metadata:
+  name: weather-exporter-conns
+spec:
+  parameters:
+    from:
+      namespace: sump-pump
+      serviceAccount: weather-exporter
+    toExternals:
+      - fqdn: api.open-meteo.com
+        port: 443
