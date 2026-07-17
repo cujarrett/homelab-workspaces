@@ -6,7 +6,7 @@ metadata:
   name: launchpad
 spec:
   parameters:
-    image: ghcr.io/cujarrett/launchpad:sha-0d4fd8624fa0bb3cd98c402e3cac1620bb4a23e5
+    image: ghcr.io/cujarrett/launchpad:sha-04979969b21fe75254ed1a8fa4f6601f4aa8ae8b
     repo: https://github.com/cujarrett/launchpad
     namespace: launchpad
     host: launchpad.mattjarrett.dev
