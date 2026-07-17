@@ -1,0 +1,23 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XApi
+metadata:
+  name: silver-toaster-api
+spec:
+  parameters:
+    namespace: guest-silver-toaster
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo3-api.mattjarrett.dev
+    tlsSecret: demo3-api-tls
+    sqlRef:
+      name: silver-toaster-sql
+      backend: private-cloud
+    nosqlRef:
+      name: silver-toaster-nosql
+    objectStorageRefs:
+      - name: silver-toaster-store
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
