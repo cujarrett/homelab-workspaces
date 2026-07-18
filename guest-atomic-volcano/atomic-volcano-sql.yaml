@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: XSql
+metadata:
+  name: atomic-volcano-sql
+spec:
+  parameters:
+    namespace: guest-atomic-volcano
+    backend: private-cloud
+    dataRetention: delete
