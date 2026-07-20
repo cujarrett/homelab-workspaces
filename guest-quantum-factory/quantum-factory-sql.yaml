@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: Sql
-metadata:
-  name: quantum-factory-sql
-spec:
-  parameters:
-    namespace: guest-quantum-factory
-    backend: private-cloud
-    dataRetention: delete
