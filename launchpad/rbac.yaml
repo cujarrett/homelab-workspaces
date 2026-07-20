@@ -6,8 +6,6 @@ rules:
   - apiGroups:
       - platform.local.lab
     resources:
-      # Old x-prefixed plurals kept alongside the new ones during the kind rename migration —
-      # drop the x* entries once the legacy XRDs are removed.
       - apis
       - spas
       - sqls
@@ -16,14 +14,6 @@ rules:
       - topics
       - subscriptions
       - wordpresses
-      - xapis
-      - xspas
-      - xsqls
-      - xnosqls
-      - xobjectstorages
-      - xtopics
-      - xsubscriptions
-      - xwordpresses
     verbs:
       - get
       - list

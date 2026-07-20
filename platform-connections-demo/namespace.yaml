@@ -1,7 +1,0 @@
-# SPA home namespace (created by the xrs ApplicationSet destination).
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: platform-connections-demo
-  labels:
-    istio-injection: enabled
