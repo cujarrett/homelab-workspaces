@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: disco-anvil-sql
+spec:
+  parameters:
+    namespace: guest-disco-anvil
+    backend: private-cloud
+    dataRetention: delete
