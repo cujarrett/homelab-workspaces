@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: atomic-burrito-nosql
-spec:
-  parameters:
-    namespace: guest-atomic-burrito
-    dataRetention: delete
