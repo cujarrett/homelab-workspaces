@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: atomic-burrito-sql
+spec:
+  parameters:
+    namespace: guest-atomic-burrito
+    backend: private-cloud
+    dataRetention: delete
