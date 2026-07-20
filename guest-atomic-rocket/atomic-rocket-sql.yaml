@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: atomic-rocket-sql
+spec:
+  parameters:
+    namespace: guest-atomic-rocket
+    backend: private-cloud
+    dataRetention: delete
