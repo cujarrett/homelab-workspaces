@@ -1,0 +1,14 @@
+# Same image and code as authorized-caller — different ServiceAccount, no declared
+# connections. That contrast is the whole demo.
+apiVersion: platform.local.lab/v1alpha1
+kind: Api
+metadata:
+  name: unauthorized-caller
+spec:
+  parameters:
+    namespace: poc-caller
+    image: ghcr.io/cujarrett/platform-connections-demo-caller:latest
+    repo: https://github.com/cujarrett/platform-connections-demo
+    port: 8080
+    metricsPort: 8080
+    size: xs

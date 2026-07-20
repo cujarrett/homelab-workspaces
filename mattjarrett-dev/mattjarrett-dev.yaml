@@ -1,5 +1,5 @@
 apiVersion: platform.local.lab/v1alpha1
-kind: XSpa
+kind: Spa
 metadata:
   name: mattjarrett-dev
 spec:

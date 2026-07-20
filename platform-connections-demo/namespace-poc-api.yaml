@@ -1,0 +1,7 @@
+# Adopts the hand-created POC namespace into GitOps (labels included).
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: poc-api
+  labels:
+    istio-injection: enabled

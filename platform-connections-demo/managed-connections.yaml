@@ -1,0 +1,17 @@
+# The demo UI. Only internet-facing piece — the callers and api stay ClusterIP-only;
+# nginx proxies each path prefix to its caller in-cluster.
+apiVersion: platform.local.lab/v1alpha1
+kind: Spa
+metadata:
+  name: managed-connections
+spec:
+  parameters:
+    namespace: platform-connections-demo
+    image: ghcr.io/cujarrett/platform-connections-demo-spa:latest
+    host: managed-connections.local.lab
+    size: xs
+    apiProxies:
+      - path: /authorized/
+        upstream: authorized-caller.poc-caller.svc.cluster.local
+      - path: /unauthorized/
+        upstream: unauthorized-caller.poc-caller.svc.cluster.local

@@ -1,7 +1,7 @@
 # nginx proxies /api/ → launchpad-api in-cluster; API never gets a public hostname.
 # CSP extended to allow MSAL token requests to login.microsoftonline.com.
 apiVersion: platform.local.lab/v1alpha1
-kind: XSpa
+kind: Spa
 metadata:
   name: launchpad
 spec:

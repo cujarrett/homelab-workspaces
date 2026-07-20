@@ -1,5 +1,5 @@
 apiVersion: platform.local.lab/v1alpha1
-kind: XSubscription
+kind: Subscription
 metadata:
   name: sump-pump-monitor
 spec:

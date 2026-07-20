@@ -1,0 +1,21 @@
+# authorized-caller's declared connections: upstream-api on-platform, open-meteo off-platform.
+# unauthorized-caller deliberately has none.
+apiVersion: platform.local.lab/v1alpha1
+kind: Connection
+metadata:
+  name: authorized-caller-conns
+spec:
+  parameters:
+    from:
+      namespace: poc-caller
+      serviceAccount: authorized-caller
+    toServices:
+      - namespace: poc-api
+        appLabel: upstream-api
+        port: 8080
+        httpPolicy:
+          allowMethods: ["GET"]
+          allowPaths: ["/api/v1/*"]
+    toExternals:
+      - fqdn: api.open-meteo.com
+        port: 443

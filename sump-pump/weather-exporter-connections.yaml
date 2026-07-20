@@ -1,6 +1,6 @@
-# serviceAccount: weather-exporter is this instance's own SA, distinct from the other two XApis in sump-pump.
+# serviceAccount: weather-exporter is this instance's own SA, distinct from the other two Apis in sump-pump.
 apiVersion: platform.local.lab/v1alpha1
-kind: XConnection
+kind: Connection
 metadata:
   name: weather-exporter-conns
 spec:
