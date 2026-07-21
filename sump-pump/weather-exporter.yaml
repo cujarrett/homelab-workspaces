@@ -9,4 +9,3 @@ spec:
     repo: https://github.com/cujarrett/weather-exporter
     port: 8080
     metricsPort: 8080
-    enforce: true
