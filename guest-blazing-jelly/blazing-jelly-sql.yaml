@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: blazing-jelly-sql
+spec:
+  parameters:
+    namespace: guest-blazing-jelly
+    backend: private-cloud
+    dataRetention: delete
