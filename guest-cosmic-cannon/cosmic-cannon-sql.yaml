@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: cosmic-cannon-sql
+spec:
+  parameters:
+    namespace: guest-cosmic-cannon
+    backend: private-cloud
+    dataRetention: delete
