@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: fuzzy-volcano-sql
+  namespace: guest-fuzzy-volcano
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: delete
