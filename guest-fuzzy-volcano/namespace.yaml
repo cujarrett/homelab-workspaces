@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: guest-fuzzy-volcano
+  labels:
+    launchpad.local.lab/slot: demo1
+  annotations:
+    linkerd.io/inject: enabled
+    argocd.argoproj.io/sync-wave: "-1"
