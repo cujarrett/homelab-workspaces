@@ -67,10 +67,13 @@ subjects:
     namespace: launchpad
 ---
 # launchpad-api pushes a workspace directory to Git and then tells ArgoCD to look
-# now, rather than letting the sandbox wait out the ApplicationSet's 60s requeue.
-# Pinned to the xrs ApplicationSet. Applications are deliberately left out - patch
-# cannot be limited to one field, so granting it would let this pod repoint any
-# Application at another repo and have the cluster-admin controller apply it.
+# now, rather than letting the sandbox wait out the ApplicationSet's 60s requeue
+# or the controller's reconciliation timer. Both grants are pinned by name, which
+# is what makes patch safe here - patch cannot be limited to a single field, so an
+# unpinned grant would let this pod repoint any Application at another repo and
+# have the cluster-admin controller apply it. The Application names are the five
+# fixed demo slots; a new slot needs adding here or its sandbox silently falls
+# back to waiting out the timer.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -80,6 +83,10 @@ rules:
   - apiGroups: ["argoproj.io"]
     resources: ["applicationsets"]
     resourceNames: ["xrs"]
+    verbs: ["get", "patch"]
+  - apiGroups: ["argoproj.io"]
+    resources: ["applications"]
+    resourceNames: ["demo1", "demo2", "demo3", "demo4", "demo5"]
     verbs: ["get", "patch"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
