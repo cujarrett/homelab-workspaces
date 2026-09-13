@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: silver-rocket-store
-  namespace: guest-silver-rocket
-spec:
-  parameters:
-    dataRetention: delete
