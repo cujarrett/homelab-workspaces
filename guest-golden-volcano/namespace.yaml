@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: guest-golden-volcano
-  labels:
-    launchpad.local.lab/slot: demo2
-  annotations:
-    linkerd.io/inject: enabled
-    argocd.argoproj.io/sync-wave: "-1"
