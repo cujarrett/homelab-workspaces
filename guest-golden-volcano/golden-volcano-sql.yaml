@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: golden-volcano-sql
+  namespace: guest-golden-volcano
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: delete
