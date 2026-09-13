@@ -14,12 +14,6 @@ spec:
     # from this ref alone.
     nosqlRef:
       name: records
-    # Out is declared here, in is granted on upstream-api. Both must hold.
-    provides:
-      - name: demo
-        auth: mesh
-        allowedCallers:
-          - { namespace: platform-connections-demo, app: connections-demo }
     consumes:
       - { host: api.open-meteo.com }
       - { namespace: platform-connections-demo, app: upstream-api }

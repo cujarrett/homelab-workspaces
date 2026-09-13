@@ -15,10 +15,5 @@ spec:
     cache:
       enabled: true
       backend: private-cloud
-    provides:
-      - name: collection
-        auth: mesh
-        allowedCallers:
-          - { namespace: my-vinyl, app: my-vinyl }
     consumes:
       - { host: api.discogs.com }

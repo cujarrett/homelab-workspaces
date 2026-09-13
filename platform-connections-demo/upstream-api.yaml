@@ -9,7 +9,7 @@ spec:
     repo: https://github.com/cujarrett/platform-connections-demo
     port: 8080
     replicas: 1
-    # No host, so nothing but a declared caller can reach this API.
+    # No host, so only meshed workloads that declare it can reach this API.
     provides:
       - name: Data.Read
         auth: workload
