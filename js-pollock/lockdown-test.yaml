@@ -1,0 +1,29 @@
+# Lockdown test - every object below must be refused by the workloads project.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: lockdown-test
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: view
+subjects:
+  - kind: ServiceAccount
+    name: nobody
+    namespace: js-pollock
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: lockdown-test
+  namespace: js-pollock
+stringData:
+  test: "kind"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lockdown-test
+  namespace: crossplane-system
+data:
+  test: "cross-namespace"
