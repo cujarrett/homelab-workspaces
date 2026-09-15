@@ -5,7 +5,7 @@ metadata:
   namespace: sump-pump
 spec:
   parameters:
-    image: ghcr.io/cujarrett/weather-exporter:sha-c13e3abeee347df0c027e8104b39c88ca0530310
+    image: ghcr.io/cujarrett/weather-exporter:sha-079f35c5a055d361f623734beca1329d5a485a3f
     repo: https://github.com/cujarrett/weather-exporter
     port: 8080
     metricsPort: 8080
