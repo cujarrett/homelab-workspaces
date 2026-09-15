@@ -29,7 +29,7 @@ See [homelab](https://github.com/cujarrett/homelab) for cluster infra, platform 
 
 Create `<namespace>/namespace.yaml` and `<namespace>/<xr-instance-name>.yaml`, then add a `deploy` job to the source repo's CI in one of the three shapes below.
 
-`HOMELAB_PAT` is a fine-grained PAT scoped to this repo with `Contents: Read and write`.
+`HOMELAB_WORKSPACES_PAT` holds `homelab-workspaces-deploy`, a fine-grained PAT scoped to this repo with `Contents: Read and write`.
 
 ### Zero-config
 
@@ -41,7 +41,7 @@ deploy:
   if: github.ref == 'refs/heads/main'
   uses: cujarrett/homelab-workspaces/.github/workflows/update-image-tag.yml@main
   secrets:
-    homelab_pat: ${{ secrets.HOMELAB_PAT }}
+    homelab_pat: ${{ secrets.HOMELAB_WORKSPACES_PAT }}
 ```
 
 ### Namespace override
@@ -56,7 +56,7 @@ deploy:
   with:
     namespace: sump-pump
   secrets:
-    homelab_pat: ${{ secrets.HOMELAB_PAT }}
+    homelab_pat: ${{ secrets.HOMELAB_WORKSPACES_PAT }}
 ```
 
 ### File and image override
@@ -72,7 +72,7 @@ deploy:
     image: ghcr.io/cujarrett/platform-connections-demo-api
     file: platform-connections-demo/upstream-api.yaml
   secrets:
-    homelab_pat: ${{ secrets.HOMELAB_PAT }}
+    homelab_pat: ${{ secrets.HOMELAB_WORKSPACES_PAT }}
 ```
 
 Set `image` whenever the built image is not `ghcr.io/cujarrett/<repo-name>`. The workflow rewrites the line matching `image: <image>:`, so a wrong default silently matches nothing and the deploy passes without changing anything.
