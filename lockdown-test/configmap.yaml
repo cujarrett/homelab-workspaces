@@ -1,7 +1,0 @@
-# Lockdown test - namespace not in the workloads project, so this app must not sync.
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: lockdown-test
-data:
-  test: "destination"
