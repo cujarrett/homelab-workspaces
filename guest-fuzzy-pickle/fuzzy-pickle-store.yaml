@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: fuzzy-pickle-store
-  namespace: guest-fuzzy-pickle
-spec:
-  parameters:
-    dataRetention: delete
