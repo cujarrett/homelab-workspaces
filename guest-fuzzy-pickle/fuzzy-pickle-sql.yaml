@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: Sql
-metadata:
-  name: fuzzy-pickle-sql
-  namespace: guest-fuzzy-pickle
-spec:
-  parameters:
-    backend: private-cloud
-    dataRetention: delete
