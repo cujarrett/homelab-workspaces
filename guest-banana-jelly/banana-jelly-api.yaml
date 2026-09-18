@@ -1,0 +1,24 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Api
+metadata:
+  name: banana-jelly-api
+  namespace: guest-banana-jelly
+  annotations:
+    # AWS binding secrets need a second render pass to pick up the RolesAnywhere
+    # profile ARN. Crossplane's 1m default poll made most sandboxes wait a full
+    # extra minute for that pass - this bounds the wait to 5s.
+    crossplane.io/poll-interval: "5s"
+spec:
+  parameters:
+    image: ghcr.io/cujarrett/hello-world-api:latest
+    port: 8080
+    replicas: 1
+    host: demo4-api.mattjarrett.dev
+    tlsSecret: demo4-api-tls
+    sqlRef:
+      name: banana-jelly-sql
+      backend: private-cloud
+    cache:
+      enabled: true
+      backend: private-cloud
+    readinessCheckPath: /readyz
