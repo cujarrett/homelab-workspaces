@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: neon-factory-sql
+  namespace: guest-neon-factory
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: delete
