@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: orphan-test1-sql
+  namespace: guest-orphan-test1
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: delete
