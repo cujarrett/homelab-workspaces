@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: orphan-test2-store
-  namespace: guest-orphan-test2
-spec:
-  parameters:
-    dataRetention: delete
