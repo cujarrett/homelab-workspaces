@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: midnight-volcano-store
-  namespace: guest-midnight-volcano
-spec:
-  parameters:
-    dataRetention: delete
