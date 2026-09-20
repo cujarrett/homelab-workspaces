@@ -1,2 +1,4 @@
 createdAt: "2026-09-20T01:47:44Z"
-slot: "demo3"
+slot: demo3
+phaseTimes:
+    "0": "2026-09-20T01:47:52Z"
