@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: shadow-pickle-sql
+  namespace: guest-shadow-pickle
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: delete
