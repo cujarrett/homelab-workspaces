@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: magic-burrito-sql
+  namespace: guest-magic-burrito
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: delete
