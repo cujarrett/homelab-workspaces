@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: guest-velvet-taco
+  labels:
+    launchpad.local.lab/slot: demo2
+    platform.local.lab/workloads: "true"
+    istio-injection: enabled
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
