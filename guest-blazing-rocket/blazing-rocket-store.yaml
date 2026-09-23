@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: blazing-rocket-store
-  namespace: guest-blazing-rocket
-spec:
-  parameters:
-    dataRetention: delete
