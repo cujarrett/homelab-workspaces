@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: Sql
-metadata:
-  name: quantum-waffle-sql
-  namespace: guest-quantum-waffle
-spec:
-  parameters:
-    backend: private-cloud
-    dataRetention: delete
