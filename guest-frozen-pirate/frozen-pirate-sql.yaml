@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: frozen-pirate-sql
+  namespace: guest-frozen-pirate
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: delete
