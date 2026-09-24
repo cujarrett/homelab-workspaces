@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: frozen-pirate-store
-  namespace: guest-frozen-pirate
-spec:
-  parameters:
-    dataRetention: delete
