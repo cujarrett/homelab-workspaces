@@ -6,7 +6,7 @@ metadata:
 spec:
   parameters:
     # CI rewrites this to a digest on every merge to main.
-    image: ghcr.io/cujarrett/platform-graph-demo-reviews:main
+    image: ghcr.io/cujarrett/platform-graph-demo-reviews@sha256:db3dcbb3d361b1dbeeed417c9204c2d9d882c20af13f92fd9bf7b0c73ce0c7db
     repo: https://github.com/cujarrett/platform-graph-demo
     port: 8080
     replicas: 1
