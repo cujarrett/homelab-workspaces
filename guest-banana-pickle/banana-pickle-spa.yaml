@@ -1,0 +1,16 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Spa
+metadata:
+  name: banana-pickle-spa
+  namespace: guest-banana-pickle
+  annotations:
+    # A Spa naming an apiProxies target is rejected if that Api is not admitted
+    # yet, so the Spa waits a wave. Namespace is -1, Api is 0, this is 1.
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  parameters:
+    image: ghcr.io/cujarrett/hello-world-spa:latest
+    host: demo4.mattjarrett.dev
+    tlsSecret: demo4-tls
+    replicas: 1
+    contentSecurityPolicy: default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://*.mattjarrett.dev; frame-ancestors 'none'; base-uri 'self';
