@@ -1,0 +1,12 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Api
+metadata:
+  name: records
+  namespace: graph-test
+spec:
+  parameters:
+    # CI rewrites this to a digest on every merge to main.
+    image: ghcr.io/cujarrett/platform-graph-demo-records:main
+    repo: https://github.com/cujarrett/platform-graph-demo
+    port: 8080
+    replicas: 1
