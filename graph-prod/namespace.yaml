@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: graph-prod
+  labels:
+    platform.local.lab/workloads: "true"
+    pod-security.kubernetes.io/enforce: restricted
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/audit: restricted
+    istio-injection: enabled
+  annotations:
+    # Prune after the XRs. A namespace that starts terminating while managed
+    # resources still hold finalizers deadlocks and never finishes.
+    argocd.argoproj.io/sync-wave: "-1"

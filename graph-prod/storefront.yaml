@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: FederatedGraph
+metadata:
+  name: storefront
+  namespace: graph-prod
+spec:
+  parameters:
+    graphRef: storefront-homelab@prod
+    host: graph-prod.local.lab

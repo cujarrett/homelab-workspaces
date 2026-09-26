@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: GraphApi
+metadata:
+  name: records
+  namespace: graph-prod
+spec:
+  parameters:
+    graph: storefront
+    # just promote moves the digest running in test here, by pull request.
+    image: ghcr.io/cujarrett/platform-graph-demo-records@sha256:cf5eff72755d88e9c26175703b28cb72ddc0a3bbe4e9dfcfd3d6529487c35034

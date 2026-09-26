@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: GraphApi
+metadata:
+  name: reviews
+  namespace: graph-prod
+spec:
+  parameters:
+    graph: storefront
+    # just promote moves the digest running in test here, by pull request.
+    image: ghcr.io/cujarrett/platform-graph-demo-reviews@sha256:03c1b39d215e4bbd40431d92c6f70685bb09cf8928a7e71cf262c4e403b0c95b
