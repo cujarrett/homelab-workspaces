@@ -1,12 +1,10 @@
 apiVersion: platform.local.lab/v1alpha1
-kind: Api
+kind: GraphApi
 metadata:
   name: records
   namespace: graph-test
 spec:
   parameters:
-    # CI rewrites this to a digest on every merge to main.
+    graph: storefront
+    # CI rewrites this to the new digest on every merge to main.
     image: ghcr.io/cujarrett/platform-graph-demo-records@sha256:b7cab5713357234c625899fd811eeb181a57183187c0d3ba9b56f47194bd3278
-    repo: https://github.com/cujarrett/platform-graph-demo
-    port: 8080
-    replicas: 1
