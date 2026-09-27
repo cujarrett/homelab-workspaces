@@ -7,4 +7,4 @@ spec:
   parameters:
     graph: storefront
     # CI rewrites this to the new digest on every merge to main.
-    image: ghcr.io/cujarrett/storefront-records@sha256:5dc12e3ec63740fd1e1fc854a4c500b1474cee16466683e42fd0733ed42187fc
+    image: ghcr.io/cujarrett/storefront-records@sha256:7c1c141ca561ab375fd962a943606c7afd0b67bd94e281c5a8979f24d3014919
