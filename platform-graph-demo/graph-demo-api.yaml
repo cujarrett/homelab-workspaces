@@ -1,0 +1,19 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Api
+metadata:
+  name: graph-demo-api
+  namespace: platform-graph-demo
+spec:
+  parameters:
+    image: ghcr.io/cujarrett/platform-graph-demo-backend:latest
+    repo: https://github.com/cujarrett/platform-graph-demo
+    port: 8080
+    replicas: 1
+    size: xs
+    # No host. Only the page's nginx reaches this, through apiProxies.
+    consumes:
+      # The prod router. Every query the page can run is fixed in this backend.
+      - { namespace: graph-prod, app: storefront-router }
+      # GitHub, for the last schema commit and the digest each lane runs.
+      - { host: api.github.com }
+      - { host: raw.githubusercontent.com }

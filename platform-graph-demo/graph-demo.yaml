@@ -1,0 +1,17 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Spa
+metadata:
+  name: graph-demo
+  namespace: platform-graph-demo
+spec:
+  parameters:
+    image: ghcr.io/cujarrett/platform-graph-demo-spa:latest
+    repo: https://github.com/cujarrett/platform-graph-demo
+    host: graph.mattjarrett.dev
+    tlsIssuer: letsencrypt-prod
+    replicas: 1
+    size: xs
+    contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';"
+    apiProxies:
+      - path: /api/
+        app: graph-demo-api
