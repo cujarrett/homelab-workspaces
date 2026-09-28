@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: phantom-cannon-store
-  namespace: guest-phantom-cannon
-spec:
-  parameters:
-    dataRetention: delete
