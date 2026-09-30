@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: NoSql
+metadata:
+  name: electric-hamster-nosql
+  namespace: guest-electric-hamster
+spec:
+  parameters:
+    dataRetention: delete
