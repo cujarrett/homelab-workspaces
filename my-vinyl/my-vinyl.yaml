@@ -5,7 +5,7 @@ metadata:
   namespace: my-vinyl
 spec:
   parameters:
-    image: ghcr.io/cujarrett/my-vinyl:sha-979e03131e2ef8dc239e64b8bb63e436ad4bbdd2
+    image: ghcr.io/cujarrett/my-vinyl:sha-3c335b00a9dd3c8d660f61c8fca0ffc8a7b85b85
     repo: https://github.com/cujarrett/my-vinyl
     host: myvinyl.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
