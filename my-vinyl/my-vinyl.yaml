@@ -15,3 +15,5 @@ spec:
     apiProxies:
       - path: /api/
         app: my-vinyl-api
+    publicConfig:
+      apiUrl: /api/collection
