@@ -5,7 +5,7 @@ metadata:
   namespace: platform-connections-demo
 spec:
   parameters:
-    image: ghcr.io/cujarrett/platform-connections-demo-spa:sha-bf7f5143a1fac32e8f15a7a1fca09150508a1ea1
+    image: ghcr.io/cujarrett/platform-connections-demo-spa:sha-da208e68155082b167cb4fc2cf893ab6c28d6874
     repo: https://github.com/cujarrett/platform-connections-demo
     host: connections.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
