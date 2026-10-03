@@ -7,4 +7,4 @@ spec:
   parameters:
     graph: storefront
     # CI opens a PR moving the digest running in test here. Merging it promotes.
-    image: ghcr.io/cujarrett/storefront-records@sha256:cc97de82afb6704e01b7cec4babf1b64db2a26d6c2261744e02266d5106cc49c
+    image: ghcr.io/cujarrett/storefront-records@sha256:cdd678fd19e5b97512f28b3f9431c52d5aafdce7e5bf7270308ef259828b011e
