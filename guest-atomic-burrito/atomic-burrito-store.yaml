@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: ObjectStorage
+metadata:
+  name: atomic-burrito-store
+  namespace: guest-atomic-burrito
+spec:
+  parameters:
+    dataRetention: delete
