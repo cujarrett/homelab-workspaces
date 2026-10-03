@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: Sql
-metadata:
-  name: electric-cannon-sql
-  namespace: guest-electric-cannon
-spec:
-  parameters:
-    backend: private-cloud
-    dataRetention: delete
