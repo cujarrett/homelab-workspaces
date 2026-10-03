@@ -7,7 +7,7 @@ metadata:
   namespace: launchpad
 spec:
   parameters:
-    image: ghcr.io/cujarrett/launchpad:sha-06571e04dca27ed58428e2d08e71620c07c3969b
+    image: ghcr.io/cujarrett/launchpad:sha-9a2d6ee09c6d51921135b908be61e50ab506851a
     repo: https://github.com/cujarrett/launchpad
     host: launchpad.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
