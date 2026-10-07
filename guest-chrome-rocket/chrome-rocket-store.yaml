@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "chrome-rocket-store"
-  namespace: "guest-chrome-rocket"
-spec:
-  parameters:
-    dataRetention: "delete"
