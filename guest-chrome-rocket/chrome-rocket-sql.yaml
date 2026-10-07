@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "chrome-rocket-sql"
+  namespace: "guest-chrome-rocket"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
