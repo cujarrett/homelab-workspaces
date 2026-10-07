@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "haunted-cannon-nosql"
-  namespace: "guest-haunted-cannon"
-spec:
-  parameters:
-    dataRetention: "delete"
