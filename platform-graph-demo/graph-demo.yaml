@@ -5,7 +5,7 @@ metadata:
   namespace: platform-graph-demo
 spec:
   parameters:
-    image: ghcr.io/cujarrett/platform-graph-demo-spa:sha-fe6f1c054ab757da36e00f17a76bb4606455eb53
+    image: ghcr.io/cujarrett/platform-graph-demo-spa:sha-60c744eb7031babbb362b55a85b0962268808d6d
     repo: https://github.com/cujarrett/platform-graph-demo
     host: graph.mattjarrett.dev
     tlsIssuer: letsencrypt-prod
