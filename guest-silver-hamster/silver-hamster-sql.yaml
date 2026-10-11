@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: Sql
-metadata:
-  name: "silver-hamster-sql"
-  namespace: "guest-silver-hamster"
-spec:
-  parameters:
-    backend: "private-cloud"
-    dataRetention: "delete"
