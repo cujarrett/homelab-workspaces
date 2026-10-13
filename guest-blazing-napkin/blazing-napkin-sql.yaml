@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "blazing-napkin-sql"
+  namespace: "guest-blazing-napkin"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
