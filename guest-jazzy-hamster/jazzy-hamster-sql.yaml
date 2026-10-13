@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "jazzy-hamster-sql"
+  namespace: "guest-jazzy-hamster"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
