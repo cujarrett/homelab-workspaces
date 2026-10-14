@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "frozen-cactus-sql"
+  namespace: "guest-frozen-cactus"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
