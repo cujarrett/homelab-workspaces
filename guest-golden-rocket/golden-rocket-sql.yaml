@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "golden-rocket-sql"
+  namespace: "guest-golden-rocket"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
