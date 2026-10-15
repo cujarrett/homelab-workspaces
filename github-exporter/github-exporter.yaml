@@ -5,7 +5,7 @@ metadata:
   namespace: github-exporter
 spec:
   parameters:
-    image: ghcr.io/cujarrett/github-exporter:sha-0e77584ec7c47366d34e4ae369a0482e6433bda7
+    image: ghcr.io/cujarrett/github-exporter:sha-c2cc113564854ee1cd8d6d8e4d1d84c260cf261a
     port: 8080
     # Serves metrics on the traffic port, so the default 9090 would scrape nothing.
     metricsPort: 8080
