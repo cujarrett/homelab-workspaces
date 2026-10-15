@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "golden-rocket-store"
-  namespace: "guest-golden-rocket"
-spec:
-  parameters:
-    dataRetention: "delete"
