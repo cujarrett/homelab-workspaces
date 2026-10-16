@@ -5,7 +5,7 @@ metadata:
   namespace: mattjarrett-dev
 spec:
   parameters:
-    image: ghcr.io/cujarrett/mattjarrett.dev:sha-2c3e492e1210df24ee2599725fa6e7a89a67955d
+    image: ghcr.io/cujarrett/mattjarrett.dev:sha-50929250a3c77d85a824dad6465f21d28e5879ec
     repo: https://github.com/cujarrett/mattjarrett.dev
     host: mattjarrett.dev
     tlsIssuer: letsencrypt-prod
