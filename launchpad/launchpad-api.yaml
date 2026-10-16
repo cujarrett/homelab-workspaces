@@ -15,3 +15,8 @@ spec:
     size: sm
     configFrom: [launchpad-config]
     secretsFrom: [launchpad-github-token]
+    provides:
+      - name: launchpad
+        auth: mesh
+        allowedCallers:
+          - { namespace: launchpad, app: launchpad }

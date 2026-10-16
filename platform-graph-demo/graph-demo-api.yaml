@@ -11,6 +11,11 @@ spec:
     replicas: 1
     size: sm
     # No host. Only the page's nginx reaches this, through apiProxies.
+    provides:
+      - name: demo
+        auth: mesh
+        allowedCallers:
+          - { namespace: platform-graph-demo, app: graph-demo }
     consumes:
       # The prod router. Every query the page can run is fixed in this backend.
       - { namespace: graph-prod, app: storefront-router }
