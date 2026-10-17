@@ -13,5 +13,5 @@ spec:
       - { host: api.github.com }
     configFrom:
       - github-exporter-config
-    secretsFrom:
-      - github-exporter-token
+    managedSecretRefs:
+      - name: github-exporter-token

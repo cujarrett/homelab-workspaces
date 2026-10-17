@@ -1,6 +1,6 @@
 # Cluster-internal only - no Ingress, no public hostname.
-# launchpad-config and launchpad-github-token are hand-created in the cluster, not
-# in git, so both must exist before this applies.
+# launchpad-config is hand-created in the cluster, not in git, so it must exist
+# before this applies.
 apiVersion: platform.local.lab/v1alpha1
 kind: Api
 metadata:
@@ -14,7 +14,8 @@ spec:
     metricsPort: 8080
     size: sm
     configFrom: [launchpad-config]
-    secretsFrom: [launchpad-github-token]
+    managedSecretRefs:
+      - name: launchpad-github-token
     provides:
       - name: launchpad
         auth: mesh

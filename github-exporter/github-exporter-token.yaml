@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: ManagedSecret
+metadata:
+  name: github-exporter-token
+  namespace: github-exporter
+spec:
+  parameters:
+    keys: [GITHUB_TOKEN]
