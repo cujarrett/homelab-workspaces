@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: Sql
-metadata:
-  name: "quantum-spatula-sql"
-  namespace: "guest-quantum-spatula"
-spec:
-  parameters:
-    backend: "private-cloud"
-    dataRetention: "delete"
