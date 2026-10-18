@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "phantom-factory-sql"
+  namespace: "guest-phantom-factory"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
