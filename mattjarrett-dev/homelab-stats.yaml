@@ -1,0 +1,25 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Api
+metadata:
+  name: homelab-stats
+  namespace: mattjarrett-dev
+spec:
+  parameters:
+    image: ghcr.io/cujarrett/homelab-stats:main
+    repo: https://github.com/cujarrett/homelab-stats
+    port: 8080
+    replicas: 1
+    size: xs
+    # No host. Only the site's nginx reaches this, through apiProxies.
+    provides:
+      - name: stats
+        auth: mesh
+        allowedCallers:
+          - { namespace: mattjarrett-dev, app: mattjarrett-dev }
+    consumes:
+      # Prometheus runs outside the mesh, so it is declared by its service name like
+      # an off-platform host. Plain HTTP, because there is no sidecar to speak mTLS to.
+      - { host: monitoring-kube-prometheus-prometheus.monitoring.svc.cluster.local, port: 9090, protocol: HTTP }
+      - { host: prometheus-cluster-availability.monitoring.svc.cluster.local, port: 9090, protocol: HTTP }
+      # The blog-stats gist, for the automerge chart.
+      - { host: api.github.com }
