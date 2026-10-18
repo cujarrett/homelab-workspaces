@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "rubber-jelly-store"
-  namespace: "guest-rubber-jelly"
-spec:
-  parameters:
-    dataRetention: "delete"
