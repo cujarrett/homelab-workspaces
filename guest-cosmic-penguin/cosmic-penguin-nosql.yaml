@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "cosmic-penguin-nosql"
-  namespace: "guest-cosmic-penguin"
-spec:
-  parameters:
-    dataRetention: "delete"
