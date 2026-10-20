@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "golden-anvil-store"
-  namespace: "guest-golden-anvil"
-spec:
-  parameters:
-    dataRetention: "delete"
