@@ -1,9 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: Sql
-metadata:
-  name: "golden-anvil-sql"
-  namespace: "guest-golden-anvil"
-spec:
-  parameters:
-    backend: "private-cloud"
-    dataRetention: "delete"
