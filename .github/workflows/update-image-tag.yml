@@ -14,7 +14,7 @@ on:
         required: false
         type: string
     secrets:
-      homelab_pat:
+      app_private_key:
         required: true
 
 jobs:
@@ -44,9 +44,19 @@ jobs:
           echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
           echo "file=$FILE"   >> "$GITHUB_OUTPUT"
 
+      # Commits through this token are credited to homelab-workspaces-deployer[bot]
+      # and signed by GitHub.
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: Iv23liC9AQ1xrWzEe4nX
+          private-key: ${{ secrets.app_private_key }}
+          repositories: homelab-workspaces
+
       - name: Update image tag
         env:
-          GH_TOKEN: ${{ secrets.homelab_pat }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           FILE="${{ steps.defaults.outputs.file }}"
           IMAGE="${{ steps.defaults.outputs.image }}"
@@ -63,11 +73,7 @@ jobs:
             if gh api --method PUT /repos/$REPO/contents/$FILE \
               -f message="chore: deploy ${IMAGE##*/} ${SHA_TAG}" \
               -f content="$(echo "$UPDATED" | base64 -w 0)" \
-              -f sha="$FILE_SHA" \
-              -f "author[name]=launchpad 🚀" \
-              -f "author[email]=launchpad@mattjarrett.dev" \
-              -f "committer[name]=launchpad 🚀" \
-              -f "committer[email]=launchpad@mattjarrett.dev"; then
+              -f sha="$FILE_SHA"; then
               exit 0
             fi
 
