@@ -8,6 +8,7 @@ spec:
     image: ghcr.io/cujarrett/homelab-stats:sha-88b1d196982f46ee1729d7a47ff50f9233284e63
     repo: https://github.com/cujarrett/homelab-stats
     port: 8080
+    metricsPort: 8080
     replicas: 1
     size: xs
     # No host. Only the site's nginx reaches this, through apiProxies.
