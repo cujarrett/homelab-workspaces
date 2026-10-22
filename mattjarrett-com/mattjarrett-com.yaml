@@ -9,5 +9,5 @@ spec:
     storageSize: "7Gi"
     dbStorageSize: "1Gi"
     replicas: 1
-    size: md
+    size: sm
     dataRetention: retain
