@@ -10,7 +10,6 @@ spec:
     image: ghcr.io/cujarrett/launchpad:sha-e0da67666819f4369a81acd795f0eeee4fe20516
     repo: https://github.com/cujarrett/launchpad
     host: launchpad.mattjarrett.dev
-    tlsIssuer: letsencrypt-prod
     size: sm
     contentSecurityPolicy: >-
       default-src 'self';

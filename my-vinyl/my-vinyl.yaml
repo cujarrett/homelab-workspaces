@@ -8,7 +8,6 @@ spec:
     image: ghcr.io/cujarrett/my-vinyl:sha-db3adb29e6125ae1ece5b3f07ee5fa7090e04fdb
     repo: https://github.com/cujarrett/my-vinyl
     host: myvinyl.mattjarrett.dev
-    tlsIssuer: letsencrypt-prod
     contentSecurityPolicy: "default-src 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.discogs.com; frame-ancestors 'none'; base-uri 'self';"
     replicas: 1
     size: sm

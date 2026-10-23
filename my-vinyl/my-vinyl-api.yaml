@@ -10,7 +10,6 @@ spec:
     port: 8080
     replicas: 1
     host: my-vinyl-api.local.lab
-    tlsIssuer: local-lab-ca-issuer
     managedSecretRefs:
       - name: discogs-credentials
     cache:

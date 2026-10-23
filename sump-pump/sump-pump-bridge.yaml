@@ -9,7 +9,6 @@ spec:
     repo: https://github.com/cujarrett/sump-pump
     port: 8080
     host: sump-pump-bridge.local.lab
-    tlsIssuer: local-lab-ca-issuer
     # The Shelly device has no DNS name, so this is declared by address. A host
     # entry would render a DNS ServiceEntry, which cannot resolve a bare IP.
     consumes:
