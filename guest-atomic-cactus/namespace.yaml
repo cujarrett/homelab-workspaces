@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: guest-atomic-cactus
+  labels:
+    platform.local.lab/workloads: "true"
+    istio-injection: enabled
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
