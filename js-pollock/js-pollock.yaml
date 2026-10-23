@@ -5,7 +5,7 @@ metadata:
   namespace: js-pollock
 spec:
   parameters:
-    image: ghcr.io/cujarrett/js-pollock:sha-69d4d449d36f005cbe048da418300eff5007c7f5
+    image: ghcr.io/cujarrett/js-pollock:sha-55dc9c9dcaff78c5b837e307dc6bcb16869db29f
     repo: https://github.com/cujarrett/js-pollock
     host: jspollock.mattjarrett.dev
     contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; base-uri 'self';"
