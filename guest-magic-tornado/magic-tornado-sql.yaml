@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "magic-tornado-sql"
+  namespace: "guest-magic-tornado"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
