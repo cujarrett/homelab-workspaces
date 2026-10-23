@@ -1,0 +1,9 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "atomic-cactus-sql"
+  namespace: "guest-atomic-cactus"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
