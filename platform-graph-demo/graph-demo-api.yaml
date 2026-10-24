@@ -5,7 +5,7 @@ metadata:
   namespace: platform-graph-demo
 spec:
   parameters:
-    image: ghcr.io/cujarrett/platform-graph-demo-backend:sha-b4bb34767fad6b5256a341283869052dc428c090
+    image: ghcr.io/cujarrett/platform-graph-demo-backend:sha-e7851e67048e328a9b082ec6e1c4c110f762e8d0
     repo: https://github.com/cujarrett/platform-graph-demo
     port: 8080
     replicas: 1
