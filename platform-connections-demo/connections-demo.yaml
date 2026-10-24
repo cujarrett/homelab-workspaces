@@ -5,7 +5,7 @@ metadata:
   namespace: platform-connections-demo
 spec:
   parameters:
-    image: ghcr.io/cujarrett/platform-connections-demo-spa:sha-6f4dea70976424c79e2478c3596cc36b4d244899
+    image: ghcr.io/cujarrett/platform-connections-demo-spa:sha-fd3571b00833512e9caa28821368ca6af5a42348
     repo: https://github.com/cujarrett/platform-connections-demo
     host: connections.mattjarrett.dev
     replicas: 1
