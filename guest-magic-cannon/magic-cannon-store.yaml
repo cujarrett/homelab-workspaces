@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "magic-cannon-store"
-  namespace: "guest-magic-cannon"
-spec:
-  parameters:
-    dataRetention: "delete"
