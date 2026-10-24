@@ -1,0 +1,11 @@
+# launchpad-api's own database. Holds the sandbox map pins, a year at most.
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: launchpad-db
+  namespace: launchpad
+spec:
+  parameters:
+    backend: private-cloud
+    dataRetention: retain
+    storageSize: 1Gi

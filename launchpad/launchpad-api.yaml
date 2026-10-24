@@ -16,6 +16,8 @@ spec:
     configFrom: [launchpad-config]
     managedSecretRefs:
       - name: launchpad-github-token
+    sqlRef:
+      name: launchpad-db
     provides:
       - name: launchpad
         auth: mesh
