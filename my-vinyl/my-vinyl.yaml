@@ -5,7 +5,7 @@ metadata:
   namespace: my-vinyl
 spec:
   parameters:
-    image: ghcr.io/cujarrett/my-vinyl:sha-c9b1e8a396889835cd3ab0458607f3a572c70478
+    image: ghcr.io/cujarrett/my-vinyl:sha-1496a08daa933e177f414f10e6d2becb5d979b9e
     repo: https://github.com/cujarrett/my-vinyl
     host: myvinyl.mattjarrett.dev
     contentSecurityPolicy: "default-src 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://i.discogs.com; frame-ancestors 'none'; base-uri 'self';"
