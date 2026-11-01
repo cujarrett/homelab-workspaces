@@ -21,6 +21,10 @@ spec:
     # Temporal deletes each guest sandbox when it expires.
     workflowRef:
       name: launchpad-cleanup
+    # It watches every platform resource to stream live status to the UI.
+    callsClusterApi: true
+    consumes:
+      - { host: api.github.com }
     provides:
       - name: launchpad
         auth: mesh
