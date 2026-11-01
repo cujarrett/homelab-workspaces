@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "neon-volcano-nosql"
-  namespace: "guest-neon-volcano"
-spec:
-  parameters:
-    dataRetention: "delete"
