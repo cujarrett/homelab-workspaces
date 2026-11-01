@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "phantom-rocket-sql"
+  namespace: "guest-phantom-rocket"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
+    storageSize: "1Gi"
