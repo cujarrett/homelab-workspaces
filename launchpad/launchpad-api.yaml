@@ -18,6 +18,9 @@ spec:
       - name: launchpad-github-token
     sqlRef:
       name: launchpad-db
+    # Temporal deletes each guest sandbox when it expires.
+    workflowRef:
+      name: launchpad-cleanup
     provides:
       - name: launchpad
         auth: mesh

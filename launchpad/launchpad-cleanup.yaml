@@ -1,0 +1,11 @@
+# Durable cleanup for Launchpad's guest sandboxes. launchpad-api runs a timer workflow
+# per sandbox here, and a sweep on a schedule.
+apiVersion: platform.local.lab/v1alpha1
+kind: Workflow
+metadata:
+  name: launchpad-cleanup
+  namespace: launchpad
+spec:
+  parameters:
+    retention: 72h
+    description: Launchpad guest sandbox cleanup
