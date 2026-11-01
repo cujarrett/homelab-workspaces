@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "phantom-rocket-store"
-  namespace: "guest-phantom-rocket"
-spec:
-  parameters:
-    dataRetention: "delete"
