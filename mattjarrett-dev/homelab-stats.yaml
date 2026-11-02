@@ -5,7 +5,7 @@ metadata:
   namespace: mattjarrett-dev
 spec:
   parameters:
-    image: ghcr.io/cujarrett/homelab-stats:sha-f75ee54dd678748056d375261a50b5f8923cdd26
+    image: ghcr.io/cujarrett/homelab-stats:sha-15d4c76994d36ef4823711510e96bfe01bb2fbe3
     repo: https://github.com/cujarrett/homelab-stats
     port: 8080
     metricsPort: 8080
