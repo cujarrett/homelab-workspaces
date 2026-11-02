@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Workflow
+metadata:
+  name: "atomic-hamster-workflow"
+  namespace: "guest-atomic-hamster"
+spec:
+  parameters:
+    # Temporal keeps closed workflows at least a day. The sandbox is gone long before.
+    retention: "24h"
+    description: "Launchpad sandbox guest-atomic-hamster"
