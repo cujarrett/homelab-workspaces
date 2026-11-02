@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "cosmic-cactus-store"
-  namespace: "guest-cosmic-cactus"
-spec:
-  parameters:
-    dataRetention: "delete"
