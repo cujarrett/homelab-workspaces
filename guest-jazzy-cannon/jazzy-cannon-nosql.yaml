@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "jazzy-cannon-nosql"
-  namespace: "guest-jazzy-cannon"
-spec:
-  parameters:
-    dataRetention: "delete"
