@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Workflow
+metadata:
+  name: "quantum-anvil-workflow"
+  namespace: "guest-quantum-anvil"
+spec:
+  parameters:
+    # Temporal keeps closed workflows at least a day. The sandbox is gone long before.
+    retention: "24h"
+    description: "Launchpad sandbox guest-quantum-anvil"
