@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: ObjectStorage
+metadata:
+  name: "turbo-waffle-store"
+  namespace: "guest-turbo-waffle"
+spec:
+  parameters:
+    dataRetention: "delete"
