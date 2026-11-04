@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: ObjectStorage
+metadata:
+  name: "turbo-pretzel-store"
+  namespace: "guest-turbo-pretzel"
+spec:
+  parameters:
+    dataRetention: "delete"
