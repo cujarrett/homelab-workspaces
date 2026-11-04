@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "golden-pirate-store"
-  namespace: "guest-golden-pirate"
-spec:
-  parameters:
-    dataRetention: "delete"
