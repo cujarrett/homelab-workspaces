@@ -19,7 +19,7 @@ spec:
     sqlRef:
       name: launchpad-db
     # Temporal deletes each guest sandbox when it expires.
-    workflowRef:
+    workflowSpaceRef:
       name: launchpad-cleanup
     # It watches every platform resource to stream live status to the UI.
     callsClusterApi: true
