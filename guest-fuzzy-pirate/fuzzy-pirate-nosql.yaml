@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "fuzzy-pirate-nosql"
-  namespace: "guest-fuzzy-pirate"
-spec:
-  parameters:
-    dataRetention: "delete"
