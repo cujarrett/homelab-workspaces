@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: NoSql
+metadata:
+  name: "silver-jelly-nosql"
+  namespace: "guest-silver-jelly"
+spec:
+  parameters:
+    dataRetention: "delete"
