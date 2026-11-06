@@ -5,7 +5,7 @@ metadata:
   namespace: mattjarrett-dev
 spec:
   parameters:
-    image: ghcr.io/cujarrett/mattjarrett.dev:sha-524ecfe6068178c2d2b5461732edcda14ab97b2b
+    image: ghcr.io/cujarrett/mattjarrett.dev:sha-8ca1a4e502a1849416a1dbcb7e2a68bd5151f0df
     repo: https://github.com/cujarrett/mattjarrett.dev
     host: mattjarrett.dev
     contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';"
