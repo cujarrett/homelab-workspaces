@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: NoSql
+metadata:
+  name: "cosmic-waffle-nosql"
+  namespace: "guest-cosmic-waffle"
+spec:
+  parameters:
+    dataRetention: "delete"
