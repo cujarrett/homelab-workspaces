@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: NoSql
+metadata:
+  name: "midnight-rocket-nosql"
+  namespace: "guest-midnight-rocket"
+spec:
+  parameters:
+    dataRetention: "delete"
