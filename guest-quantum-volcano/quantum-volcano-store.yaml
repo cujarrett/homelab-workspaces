@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "quantum-volcano-store"
-  namespace: "guest-quantum-volcano"
-spec:
-  parameters:
-    dataRetention: "delete"
