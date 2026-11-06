@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "neon-toaster-store"
-  namespace: "guest-neon-toaster"
-spec:
-  parameters:
-    dataRetention: "delete"
