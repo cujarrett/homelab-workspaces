@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "banana-wizard-nosql"
-  namespace: "guest-banana-wizard"
-spec:
-  parameters:
-    dataRetention: "delete"
