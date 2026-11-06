@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "atomic-cactus-store"
-  namespace: "guest-atomic-cactus"
-spec:
-  parameters:
-    dataRetention: "delete"
