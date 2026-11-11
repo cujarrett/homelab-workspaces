@@ -2,11 +2,9 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: mattjarrett-com
-  # NOT meshed: the wp-cron Job's pod would never reach Completed, because an
-  # istio-proxy sidecar does not exit when the job container does.
   labels:
     platform.local.lab/workloads: "true"
-    istio-injection: disabled
+    istio-injection: enabled
     pod-security.kubernetes.io/enforce: baseline
     pod-security.kubernetes.io/warn: restricted
     pod-security.kubernetes.io/audit: restricted
