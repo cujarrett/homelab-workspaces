@@ -6,5 +6,5 @@ metadata:
 spec:
   parameters:
     graph: storefront
-    # CI opens a PR moving the digest running in test here. Merging it promotes.
+    # Kargo writes the digest here when someone promotes Freight that passed test.
     image: ghcr.io/cujarrett/storefront-records@sha256:8df3a18016996c2cc35959985b9a277cc620102bc182efa8f35c9a4e36c20ddc
