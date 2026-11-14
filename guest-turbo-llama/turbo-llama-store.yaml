@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "turbo-llama-store"
-  namespace: "guest-turbo-llama"
-spec:
-  parameters:
-    dataRetention: "delete"
