@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "quantum-jelly-nosql"
-  namespace: "guest-quantum-jelly"
-spec:
-  parameters:
-    dataRetention: "delete"
