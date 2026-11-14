@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "haunted-napkin-store"
-  namespace: "guest-haunted-napkin"
-spec:
-  parameters:
-    dataRetention: "delete"
