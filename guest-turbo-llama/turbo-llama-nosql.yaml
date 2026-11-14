@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "turbo-llama-nosql"
-  namespace: "guest-turbo-llama"
-spec:
-  parameters:
-    dataRetention: "delete"
