@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "stress-t3501-store"
-  namespace: "guest-stress-t3501"
-spec:
-  parameters:
-    dataRetention: "delete"
