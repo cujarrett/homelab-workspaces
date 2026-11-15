@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "load-t3501-nosql"
-  namespace: "guest-load-t3501"
-spec:
-  parameters:
-    dataRetention: "delete"
