@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "probe-t3501-nosql"
-  namespace: "guest-probe-t3501"
-spec:
-  parameters:
-    dataRetention: "delete"
