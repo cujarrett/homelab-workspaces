@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "burst-t3501-store"
-  namespace: "guest-burst-t3501"
-spec:
-  parameters:
-    dataRetention: "delete"
