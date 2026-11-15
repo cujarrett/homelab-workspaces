@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "stress-t1949-sql"
+  namespace: "guest-stress-t1949"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
+    storageSize: "1Gi"
