@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "load-t5036-store"
-  namespace: "guest-load-t5036"
-spec:
-  parameters:
-    dataRetention: "delete"
