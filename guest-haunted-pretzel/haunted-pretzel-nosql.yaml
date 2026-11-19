@@ -1,0 +1,8 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: NoSql
+metadata:
+  name: "haunted-pretzel-nosql"
+  namespace: "guest-haunted-pretzel"
+spec:
+  parameters:
+    dataRetention: "delete"
