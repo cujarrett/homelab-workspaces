@@ -5,7 +5,7 @@ metadata:
   namespace: my-vinyl
 spec:
   parameters:
-    image: ghcr.io/cujarrett/my-vinyl-api:sha-9c48f1357d1b93ec14fb6a1c066e3835cb3e4492
+    image: ghcr.io/cujarrett/my-vinyl-api:sha-0c47dddfc92317c4b5cf52a247abce5107e70702
     repo: https://github.com/cujarrett/my-vinyl-api
     port: 8080
     replicas: 1
