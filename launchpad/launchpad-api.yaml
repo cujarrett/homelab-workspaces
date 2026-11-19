@@ -23,6 +23,10 @@ spec:
     callsClusterApi: true
     consumes:
       - { host: api.github.com }
+      # Loki holds the sandbox launch locations for the home page map.
+      # It runs outside the mesh, so it is declared by its service name like an off-platform host.
+      # Plain HTTP, because there is no sidecar to speak mTLS to.
+      - { host: loki.monitoring.svc.cluster.local, port: 3100, protocol: HTTP }
     provides:
       - name: launchpad
         auth: mesh
