@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "chrome-cactus-sql"
+  namespace: "guest-chrome-cactus"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
+    storageSize: "1Gi"
