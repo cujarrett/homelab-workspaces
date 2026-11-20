@@ -7,4 +7,4 @@ spec:
   parameters:
     graph: storefront
     # Kargo writes each new build here. See the kargo-storefront project at kargo.local.lab.
-    image: ghcr.io/cujarrett/storefront-reviews@sha256:069d47fb4499ba0badf9083127859515805eedcd6c15907ebf5a8143d6b22480
+    image: ghcr.io/cujarrett/storefront-reviews@sha256:b2318b53072063ff257bd517d09029eb93ca04cf5b207b49299bddc26f37de82
