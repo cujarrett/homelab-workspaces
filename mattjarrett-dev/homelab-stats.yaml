@@ -11,16 +11,19 @@ spec:
     metricsPort: 8080
     replicas: 1
     size: xs
-    # No host. Only the site's nginx reaches this, through apiProxies.
+    # No host. Only the two sites' nginx pods reach this, through apiProxies.
     provides:
       - name: stats
         auth: mesh
         allowedCallers:
           - { namespace: mattjarrett-dev, app: mattjarrett-dev }
+          - { namespace: mattjarrett-dev, app: jerks }
     consumes:
       # Prometheus runs outside the mesh, so it is declared by its service name like
       # an off-platform host. Plain HTTP, because there is no sidecar to speak mTLS to.
       - { host: monitoring-kube-prometheus-prometheus.monitoring.svc.cluster.local, port: 9090, protocol: HTTP }
       - { host: prometheus-cluster-availability.monitoring.svc.cluster.local, port: 9090, protocol: HTTP }
+      # Loki holds the Traefik access logs behind the attack map. It runs outside the mesh too.
+      - { host: loki.monitoring.svc.cluster.local, port: 3100, protocol: HTTP }
       # The blog-stats gist, for the automerge chart.
       - { host: api.github.com }
