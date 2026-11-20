@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "midnight-waffle-nosql"
-  namespace: "guest-midnight-waffle"
-spec:
-  parameters:
-    dataRetention: "delete"
