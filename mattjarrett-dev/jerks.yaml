@@ -7,7 +7,7 @@ metadata:
   namespace: mattjarrett-dev
 spec:
   parameters:
-    image: ghcr.io/cujarrett/jerks:sha-37171e25a0f4a211504bc5aad423c431c3024c32
+    image: ghcr.io/cujarrett/jerks:sha-3cd758dd497f58b0e9a799a745009dc3e180521e
     repo: https://github.com/cujarrett/jerks
     host: jerks.mattjarrett.dev
     contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';"
