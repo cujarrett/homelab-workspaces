@@ -1,10 +1,8 @@
-# The attack map on its own page.
-# It runs in this workspace because a Spa proxies only to an Api in its own namespace.
 apiVersion: platform.local.lab/v1alpha1
 kind: Spa
 metadata:
   name: jerks
-  namespace: mattjarrett-dev
+  namespace: jerks
 spec:
   parameters:
     image: ghcr.io/cujarrett/jerks:sha-f45d3b774487899c22c350c1e20e9107cce6f2c7
@@ -17,4 +15,5 @@ spec:
       # Only /stats is forwarded, so anything else homelab-stats serves stays private.
       - path: /api/stats/
         app: homelab-stats
+        namespace: homelab-stats
         upstreamPath: /stats

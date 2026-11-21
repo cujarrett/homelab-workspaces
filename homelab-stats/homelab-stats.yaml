@@ -2,7 +2,7 @@ apiVersion: platform.local.lab/v1alpha1
 kind: Api
 metadata:
   name: homelab-stats
-  namespace: mattjarrett-dev
+  namespace: homelab-stats
 spec:
   parameters:
     image: ghcr.io/cujarrett/homelab-stats:sha-7732169d73b98266ec9ddbe87c34e11985312977
@@ -17,7 +17,7 @@ spec:
         auth: mesh
         allowedCallers:
           - { namespace: mattjarrett-dev, app: mattjarrett-dev }
-          - { namespace: mattjarrett-dev, app: jerks }
+          - { namespace: jerks, app: jerks }
     consumes:
       # Prometheus runs outside the mesh, so it is declared by its service name like
       # an off-platform host. Plain HTTP, because there is no sidecar to speak mTLS to.

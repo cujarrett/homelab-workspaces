@@ -15,4 +15,5 @@ spec:
       # Only /stats is forwarded, so anything else homelab-stats serves stays private.
       - path: /api/stats/
         app: homelab-stats
+        namespace: homelab-stats
         upstreamPath: /stats
