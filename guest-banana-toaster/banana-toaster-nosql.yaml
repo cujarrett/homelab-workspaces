@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: NoSql
-metadata:
-  name: "banana-toaster-nosql"
-  namespace: "guest-banana-toaster"
-spec:
-  parameters:
-    dataRetention: "delete"
