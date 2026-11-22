@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: ManagedSecret
+metadata:
+  name: cloudflare-token
+  namespace: homelab-stats
+spec:
+  parameters:
+    # A Cloudflare API token with Zone Analytics Read on the public zones.
+    # homelab-stats reads it to count the requests Cloudflare stopped.
+    keys: [CLOUDFLARE_TOKEN]

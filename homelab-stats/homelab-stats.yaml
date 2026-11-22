@@ -11,6 +11,8 @@ spec:
     metricsPort: 8080
     replicas: 1
     size: xs
+    managedSecretRefs:
+      - name: cloudflare-token
     # No host. Only the two sites' nginx pods reach this, through apiProxies.
     provides:
       - name: stats
@@ -27,3 +29,5 @@ spec:
       - { host: loki.monitoring.svc.cluster.local, port: 3100, protocol: HTTP }
       # The blog-stats gist, for the automerge chart.
       - { host: api.github.com }
+      # Cloudflare's analytics, for the requests it stopped before they reached the cluster.
+      - { host: api.cloudflare.com }
