@@ -1,0 +1,10 @@
+apiVersion: platform.local.lab/v1alpha1
+kind: Sql
+metadata:
+  name: "chrome-factory-sql"
+  namespace: "guest-chrome-factory"
+spec:
+  parameters:
+    backend: "private-cloud"
+    dataRetention: "delete"
+    storageSize: "1Gi"
