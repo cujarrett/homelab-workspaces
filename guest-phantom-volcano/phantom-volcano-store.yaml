@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "phantom-volcano-store"
-  namespace: "guest-phantom-volcano"
-spec:
-  parameters:
-    dataRetention: "delete"
