@@ -5,7 +5,7 @@ metadata:
   namespace: weather-exporter
 spec:
   parameters:
-    image: ghcr.io/cujarrett/weather-exporter:sha-bf53520d45dd3326647c3e89d40c466d944c6151
+    image: ghcr.io/cujarrett/weather-exporter:sha-c86b92fa39021a4ddfd400d2c93382669ccd12b9
     repo: https://github.com/cujarrett/weather-exporter
     port: 8080
     metricsPort: 8080
