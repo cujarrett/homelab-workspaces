@@ -5,7 +5,7 @@ metadata:
   namespace: sump-pump
 spec:
   parameters:
-    image: ghcr.io/cujarrett/sump-pump-bridge:sha-600426499065e2636db427eb6e6e1934a8ab81b1
+    image: ghcr.io/cujarrett/sump-pump-bridge:sha-e69280b2d76e4ec0eec503002e9987fc2d4c10ad
     repo: https://github.com/cujarrett/sump-pump
     port: 8080
     host: sump-pump-bridge.local.lab
