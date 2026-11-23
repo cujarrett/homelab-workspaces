@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "chrome-factory-store"
-  namespace: "guest-chrome-factory"
-spec:
-  parameters:
-    dataRetention: "delete"
