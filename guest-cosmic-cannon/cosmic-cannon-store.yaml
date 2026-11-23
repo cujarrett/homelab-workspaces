@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "cosmic-cannon-store"
-  namespace: "guest-cosmic-cannon"
-spec:
-  parameters:
-    dataRetention: "delete"
