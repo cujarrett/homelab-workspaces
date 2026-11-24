@@ -5,7 +5,7 @@ metadata:
   namespace: jerks
 spec:
   parameters:
-    image: ghcr.io/cujarrett/jerks:sha-1069e6771b0ea9bc9d1c9c69bac8de99ae880a1a
+    image: ghcr.io/cujarrett/jerks:sha-2b7ec46e9d19e8f3ce9ce750e082b88403f9c19a
     repo: https://github.com/cujarrett/jerks
     host: jerks.mattjarrett.dev
     contentSecurityPolicy: "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';"
