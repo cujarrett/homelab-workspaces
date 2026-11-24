@@ -7,4 +7,4 @@ spec:
   parameters:
     graph: storefront
     # Kargo writes the digest here when someone promotes Freight that passed test.
-    image: ghcr.io/cujarrett/storefront-records@sha256:ec0c500f7630161f894237d4c11b5e88013eba687fe6967d0af973cc43ae850f
+    image: ghcr.io/cujarrett/storefront-records@sha256:8f8ac301911f64063f63457b5a0373b2cc876a859af5b32ddbbd7e4cd16e679b
