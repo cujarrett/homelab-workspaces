@@ -1,8 +1,0 @@
-apiVersion: platform.local.lab/v1alpha1
-kind: ObjectStorage
-metadata:
-  name: "turbo-hamster-store"
-  namespace: "guest-turbo-hamster"
-spec:
-  parameters:
-    dataRetention: "delete"
