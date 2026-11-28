@@ -13,7 +13,7 @@ Each top-level directory is a tenant namespace, and every directory becomes one 
   <xr-instance-name>.yaml
 ```
 
-Most files are Crossplane XR instances - the `kind` tells you which XRD. A few directories carry plain Kubernetes manifests alongside them (`launchpad/rbac.yaml`, `sump-pump/sump-pump-bridge-nodeport.yaml`); anything ArgoCD can apply is allowed.
+Most files are Crossplane XR instances - the `kind` tells you which XRD. A directory can also carry a ConfigMap or a Service, such as `sump-pump/sump-pump-bridge-nodeport.yaml`. ArgoCD refuses every other kind.
 
 The `namespace.yaml` is not optional. ArgoCD syncs with `CreateNamespace=true` and would make the namespace on its own, but the one it makes has no labels - so the workload never gets an Istio sidecar.
 
@@ -21,11 +21,13 @@ Directories named `guest-<word>-<word>` - `guest-quantum-pickle`, say - are writ
 
 ## How deploys work
 
-CI in each source repo calls the reusable workflow at `.github/workflows/update-image-tag.yml` after pushing a new image. The workflow writes the new SHA tag back to the relevant file here. The `xrs` ApplicationSet in the cluster generates one Application per top-level directory, so ArgoCD picks up the commit and syncs the app - and a brand new directory becomes a new Application with no cluster-side change.
+CI in each source repo calls the reusable workflow at `.github/workflows/update-image-tag.yml` after pushing a new image. The workflow writes the new SHA tag back to the relevant file here. The `xrs` ApplicationSet in the cluster generates one Application per top-level directory, so ArgoCD picks up the commit and syncs the app - and a brand new directory becomes a new Application once its namespace is allowed in the homelab repo.
 
 See [homelab](https://github.com/cujarrett/homelab) for cluster infra, platform compositions, and ArgoCD bootstrap config.
 
 ## Adding a new app
+
+First allow the new namespace in the homelab repo: add it to the `workloads` project in [projects.yaml](https://github.com/cujarrett/homelab/blob/main/cluster/argocd/projects.yaml) and to every namespace list in [workspace-rbac.yaml](https://github.com/cujarrett/homelab/blob/main/cluster/kyverno/workspace-rbac.yaml). Until then the new Application will not sync.
 
 Create `<namespace>/namespace.yaml` and `<namespace>/<xr-instance-name>.yaml`, then add a `deploy` job to the source repo's CI in one of the three shapes below.
 
