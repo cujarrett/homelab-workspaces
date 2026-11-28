@@ -1,3 +1,5 @@
+# The Shelly meter on the LAN posts readings to this node port.
+# platform-service-types in the homelab repo allows it by name.
 apiVersion: v1
 kind: Service
 metadata:
